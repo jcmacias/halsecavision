@@ -8,21 +8,24 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-        'view' => [
-            'theme' => [
-                'basePath' => '@app/themes/basic',
-                'baseUrl' => '@web/themes/basic',
-                'pathMap' => [
-                    '@app/views' => '@app/themes/basic',
-                ],
-            ],
-        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'T1CI3QCk9cG562O5dKUZlTrxpUyr6rey',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js' => [
+                        'js/jscript_jquery-1.7.1.min.js',
+                    ]
+                ],
+            ],
         ],
         'user' => [
             'identityClass' => 'app\models\User',
