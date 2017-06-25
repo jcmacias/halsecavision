@@ -8,6 +8,15 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'view' => [
+            'theme' => [
+                'basePath' => '@app/themes/basic',
+                'baseUrl' => '@web/themes/basic',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/basic',
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'T1CI3QCk9cG562O5dKUZlTrxpUyr6rey',
