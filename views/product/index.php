@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $bodyHomeIndex=0;
 ?>
 
-    <div class="container">
+    <div class="container ">
         <div class="product-index">
 
             <h2 class="centerBoxHeading"><?= Html::encode($this->title) ?></h2>

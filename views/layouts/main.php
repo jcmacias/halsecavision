@@ -352,7 +352,7 @@ $bodyHomeIndex=1;
 
     <!-- ============================ -->
     <section class="ie9_all">
-        <div class="container page-top-padding">
+        <div class="container">
             <?php echo Breadcrumbs::widget([
                 'homeLink' => [
                     'label' => '<i class="fa fa-home" style="font-size: 20px; color:#3499DA"></i>',
@@ -363,7 +363,6 @@ $bodyHomeIndex=1;
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]);?>
         </div>
-
     <?= $content ?>
 </section>
     <!-- ========== FOOTER ========== -->
