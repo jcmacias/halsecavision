@@ -9,12 +9,13 @@ use yii\widgets\Pjax;
 
 $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
+$bodyHomeIndex=0;
 ?>
-<section class="ie9_all">
+
     <div class="container">
         <div class="product-index">
 
-            <h1><?= Html::encode($this->title) ?></h1>
+            <h2 class="centerBoxHeading"><?= Html::encode($this->title) ?></h2>
             <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
             <p>
@@ -41,5 +42,5 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php Pjax::end(); ?></div>
     </div>
 
-</section>
+
 
