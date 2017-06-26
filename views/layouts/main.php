@@ -249,32 +249,32 @@ AppAsset::register($this);
                     <div class="col-xs-12 col-md-7 col-lg-7 fright">
                         <div id="currencies-block-top" class="top_dropdown_menu">
                             <!-- ========== CURRENCIES ========= -->
-                            <form name="currencies" id="currencies_form" action="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=index" method="get" >
-                                <input type="hidden" name="currency" id="currency_value" value="" />
-                                <input type="hidden" name="main_page" value="index" />
-                                <div class="btn-group">
-                              <span class="trigger_down dropdown-toggle" data-toggle="dropdown">
-                                <span class="lbl">USD </span>
-                              </span>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li class='current_cur'><a href="javascript:void(0);" onclick='document.getElementById("currency_value").value="USD";'>US Dollar</a></li><li><a href='javascript:void(0);' onclick='document.getElementById("currency_value").value="EUR";document.getElementById("currencies_form").submit();'>Euro</a></li><li><a href='javascript:void(0);' onclick='document.getElementById("currency_value").value="GBP";document.getElementById("currencies_form").submit();'>GB Pound</a></li>                              </ul>
-                                </div>
-                            </form>
+<!--                            <form name="currencies" id="currencies_form" action="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=index" method="get" >-->
+<!--                                <input type="hidden" name="currency" id="currency_value" value="" />-->
+<!--                                <input type="hidden" name="main_page" value="index" />-->
+<!--                                <div class="btn-group">-->
+<!--                              <span class="trigger_down dropdown-toggle" data-toggle="dropdown">-->
+<!--                                <span class="lbl">USD </span>-->
+<!--                              </span>-->
+<!--                                    <ul class="dropdown-menu" role="menu">-->
+<!--                                        <li class='current_cur'><a href="javascript:void(0);" onclick='document.getElementById("currency_value").value="USD";'>US Dollar</a></li><li><a href='javascript:void(0);' onclick='document.getElementById("currency_value").value="EUR";document.getElementById("currencies_form").submit();'>Euro</a></li><li><a href='javascript:void(0);' onclick='document.getElementById("currency_value").value="GBP";document.getElementById("currencies_form").submit();'>GB Pound</a></li>                              </ul>-->
+<!--                                </div>-->
+<!--                            </form>-->
                             <!-- ====================================== -->
                         </div>
                         <ul class="header_user_info customer_links">
                             <!-- ========== NAVIGATION LINKS ========== -->
 
-                            <li><a class="login " href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=login&amp;zenid=40mv0tfoegcguu0cep33hhokj3"></a></li>
-                            <li><a class="" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=account&amp;zenid=40mv0tfoegcguu0cep33hhokj3">My Account</a> </li>
+                            <li ><a style = "font-size: 37px" href="http://www.facebook.com"><i class="fa fa-facebook-square fa-2" aria-hidden="true"></i></a></li>
+                            <li ><a style = "font-size: 37px" href="http://www.twitter.com"><i class="fa fa-twitter-square fa-2" aria-hidden="true"></i></a></li>
 
                             <!-- ====================================== -->
                         </ul>
                     </div>
                     <div class="col-xs-12 col-md-5 col-lg-5">
                         <div class="phone">
-                            <p>(800) 234-5678</p>
-                            <span>Hours: 9am-7pm PST M-Fr</span>
+                            <p>(954) 951-6477</p>
+                            <span>Hours: 8am-5pm  M-Fr</span>
                         </div>
                     </div>
                 </div>
@@ -285,28 +285,28 @@ AppAsset::register($this);
                 <div class="row clearfix">
                     <div id="header_logo" class="col-xs-12 col-sm-3">
                         <!-- ========== LOGO ========== -->
-                        <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=index&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="includes/templates/theme002/images/logo.png"  alt="" /></a>
+                        <a href="/"><img src="/images/logo.png"  alt="" style="width: 365px;padding-top: 10px;"/></a>
                         <!-- ========================== -->
                     </div>
                     <div class="col-xs-12 col-sm-9 col-md-9">
                         <div class="header_cust_block clearfix">
-                            <p>Free Shipping</p>
+                            <p>Free Quote</p>
                             <div>
-                                <span>on orders over $499.</span>
-                                <span>This offer is valid on all our store items.</span>
+                                <span><a href="mailto:info@halsecavision.com">Contact us today.</a></span>
+                                <span>We'll help you to find the best price.</span>
                             </div>
                         </div>
                         <div class="shopping_cart" id="shopping_cart">
                             <!-- ========== SHOPPING CART ========== -->
                             <div class="shop-box-wrap">
-                                <span class="cart_title" >Cart</span><span class="st3"> (empty) </span>                                </div>
+                                <span class="cart_title" >Purchace List</span><span class="st3"> (empty) </span>                                </div>
                             <div class="shopping_cart_content" id="shopping_cart_content" >
-                                <div class="none"> Your cart is empty</div>                                </div>
+                                <div class="none"> Your list is empty</div>                                </div>
                         </div>
                         <!-- =================================== -->
                         <div id="search_block" class="clearfix">
                             <!-- ========== SEARCH ========== -->
-                            <form name="quick_find_header" action="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=advanced_search_result" method="get" class="form-inline form-search pull-right">
+                            <form name="quick_find_header" action="#" method="get" class="form-inline form-search pull-right">
                                 <input type="hidden" name="main_page" value="advanced_search_result" /><input type="hidden" name="search_in_description" value="1" /><input type="hidden" name="zenid" value="40mv0tfoegcguu0cep33hhokj3" />                                        <label class="sr-only" for="searchInput">Search</label>
                                 <input class="form-control" id="searchInput" type="text" name="keyword" />
                                 <button type="submit" class="button-search"><i class="fa fa-search"></i><b>Search</b></button>
@@ -331,7 +331,7 @@ AppAsset::register($this);
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['category/index']);?>">Categories<span class="label">New!</span></a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/about']);?>">About</a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/contact']);?>">Contact</a></li>
-                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/login']);?>">Login</a></li>
+
                                 </ul><!-- eof mega-menu -->
 
                             </div><!-- eof mega-wrapper -->
