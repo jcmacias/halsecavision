@@ -10,30 +10,36 @@ use yii\widgets\Pjax;
 $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="product-index">
+<section class="ie9_all">
+    <div class="container">
+        <div class="product-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+            <h1><?= Html::encode($this->title) ?></h1>
+            <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            <p>
+                <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
+            </p>
+            <?php Pjax::begin(); ?>    <?= GridView::widget([
+                'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
+                'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'code',
-            'name',
-            'description:ntext',
-            'image',
-            // 'qty_store',
-            // 'price',
-            // 'category_id',
+                    'id',
+                    'code',
+                    'name',
+                    'description:ntext',
+                    'image',
+                    // 'qty_store',
+                    // 'price',
+                    // 'category_id',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-<?php Pjax::end(); ?></div>
+                    ['class' => 'yii\grid\ActionColumn'],
+                ],
+            ]); ?>
+            <?php Pjax::end(); ?></div>
+    </div>
+
+</section>
+
