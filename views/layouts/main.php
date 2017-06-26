@@ -11,6 +11,7 @@ use yii\helpers\Url;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+$bodyHomeIndex=1;
 ?>
 <?php $this->beginPage() ?>
 <!doctype html>
@@ -350,9 +351,20 @@ AppAsset::register($this);
 
 
     <!-- ============================ -->
-
-        <?= $content ?>
-
+    <section class="ie9_all">
+        <div class="container">
+            <?php echo Breadcrumbs::widget([
+                'homeLink' => [
+                    'label' => '<i class="fa fa-home" style="font-size: 20px; color:#3499DA"></i>',
+                    'url' => Yii::$app->homeUrl,
+                    'separator'=>'>>',
+                    'encode'=>false,
+                ],
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]);?>
+        </div>
+    <?= $content ?>
+</section>
     <!-- ========== FOOTER ========== -->
     <footer>
         <div class="footer-container">
