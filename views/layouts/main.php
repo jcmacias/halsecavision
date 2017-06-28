@@ -378,23 +378,23 @@ $bodyHomeIndex=1;
 
                         <div class="ezpagesFooterCol col1" style="width: 100%">
                             <ul>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=index&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Home</a></li>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=products_new&amp;zenid=40mv0tfoegcguu0cep33hhokj3">New Products</a></li>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=specials&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Specials</a></li>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=products_all&amp;zenid=40mv0tfoegcguu0cep33hhokj3">All Products</a></li>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=reviews&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Reviews</a></li>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=contact_us&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Contacts</a></li>
-                                <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=gv_faq&amp;zenid=40mv0tfoegcguu0cep33hhokj3">FAQs</a></li>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">New Products</a></li>
+                                <li><a href="">Specials</a></li>
+                                <li><a href="">All Products</a></li>
+                                <li><a href="">Reviews</a></li>
+                                <li><a href="">Contacts</a></li>
+                                <li><a href=" ">FAQs</a></li>
                             </ul>
                         </div>					</div>
                     <div class="account col-xs-12 col-sm-3 mb">
                         <h2 class="title_btn2">Customers</h2>
                         <ul class="account_list">
-                            <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=login&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Log In</a></li>
-                            <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=create_account&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Create Account</a></li>
-                            <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=shippinginfo&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Shipping &amp; Returns</a></li>
-                            <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=privacy&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Privacy Notice</a></li>
-                            <li><a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=conditions&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Conditions of Use</a></li>
+                            <li><a href=" ">Log In</a></li>
+                            <li><a href="">Create Account</a></li>
+                            <li><a href="">Shipping &amp; Returns</a></li>
+                            <li><a href="">Privacy Notice</a></li>
+                            <li><a href="">Conditions of Use</a></li>
                         </ul>
                     </div>
                     <div class="social col-xs-12 col-sm-3 mb">
@@ -408,10 +408,10 @@ $bodyHomeIndex=1;
                     <div class="contact-block col-xs-12 col-sm-3 mb">
                         <h2 class="title_btn4">Contact Us</h2>
                         <div class="contact_list">
-                            <p>Company Inc., 8901 Marmora Road,<br/>
-                                Glasgow, D04 89GR</p>
+                            <p>4700 W Prospect Rd #103,<br/>
+                                Fort Lauderdale, FL, 33309</p>
                             <div class="phone">
-                                (800) 234-5678                </div>
+                                (954) 951-6477  </div>
                         </div>
                     </div>
                     <div><!-- {%FOOTER_LINK} --></div>
