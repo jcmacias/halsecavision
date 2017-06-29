@@ -15,21 +15,9 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'code') ?>
 
-    <?= $form->field($model, 'name') ?>
-
-    <?= $form->field($model, 'description') ?>
-
-    <?= $form->field($model, 'image') ?>
-
-    <?php // echo $form->field($model, 'qty_store') ?>
-
-    <?php // echo $form->field($model, 'price') ?>
-
-    <?php // echo $form->field($model, 'category_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

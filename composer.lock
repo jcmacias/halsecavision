@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2466a76f496d0e985872449556307cf1",
+    "content-hash": "d9ceb6426f79aa8c6f54bfa1837e3e4c",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -266,6 +266,64 @@
                 "markdown-extra"
             ],
             "time": "2016-09-14T20:40:20+00:00"
+        },
+        {
+            "name": "circulon/yii2-columnlistview",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/circulon/yii2-columnlistview.git",
+                "reference": "06217130843005d96be2a69727f73cb37ccebe5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/circulon/yii2-columnlistview/zipball/06217130843005d96be2a69727f73cb37ccebe5c",
+                "reference": "06217130843005d96be2a69727f73cb37ccebe5c",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "circulon\\widgets\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kieren Eaton",
+                    "email": "circledev@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Responsive columnar List View for Yii 2.x",
+            "homepage": "https://github.com/circulon/yii2-columnlistview.git",
+            "keywords": [
+                "ListView",
+                "circulon",
+                "column",
+                "columns",
+                "list view",
+                "responsive",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2015-06-28T12:49:52+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",

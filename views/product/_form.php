@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 //use kartik\form\ActiveForm;
 //use kartik\widgets\FileInput;
 
@@ -11,6 +12,8 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="product-form">
+
+
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
@@ -22,8 +25,17 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'qty_store')->textInput() ?>
 
     <?= $form->field($model, 'price')->textInput() ?>
+    <?php
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    $categoryTemp = \app\models\Category::find()->orderBy('name')->asArray()->all();
+
+    $categoryList = ArrayHelper::map($categoryTemp, 'id', 'name');
+
+
+    ?>
+
+
+    <?= $form->field($model, 'category_id')->dropDownList($categoryList)?>
 
     <?= $form->field($model, 'upload_file')->fileInput() ?>
 

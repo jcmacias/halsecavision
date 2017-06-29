@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="container">
     <div class="product-create">
 
-        <h1><?= Html::encode($this->title) ?></h1>
+        <h2 class="centerBoxHeading"><?= Html::encode($this->title) ?></h2>
 
         <?= $this->render('_form', [
             'model' => $model,
