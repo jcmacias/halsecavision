@@ -330,6 +330,7 @@ $bodyHomeIndex=1;
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['product/index']);?>">Product<span class="label">New!</span></a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['purchase/index']);?>">Purchase</a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['category/index']);?>">Categories<span class="label">New!</span></a></li>
+                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/']);?>">How Work</a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/about']);?>">About</a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/contact']);?>">Contact</a></li>
 

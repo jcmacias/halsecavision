@@ -18,7 +18,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+
         'css/stylesheet_bootstrap.css',
         'css/stylesheet_bootstrap_theme.css',
         'css/stylesheet_categories.css',
@@ -31,6 +31,7 @@ class AppAsset extends AssetBundle
         'css/stylesheet_suggestionbox.css',
         'css/index_home.css',
         'css/homeslider.css',
+        'css/site.css',
     ];
     public $js = [
 //        'js/jscript_jquery-1.7.1.min.js',

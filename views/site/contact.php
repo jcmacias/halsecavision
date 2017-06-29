@@ -7,10 +7,13 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
-
-$this->title = 'Contact';
-$this->params['breadcrumbs'][] = $this->title;
+//
+//$this->title = 'Contact';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -33,36 +36,73 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php else: ?>
 
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
-        <div class="row">
-            <div class="col-lg-5">
+    <div class="container">
+
+    <h2 class="centerBoxHeading h2BoxHeading">Contact Us</h2>
+
+        <div class="form-control-block">
+            <input name="securityToken" value="1b0ff7e4cc5cd8f42fa109a146e90e52" type="hidden">
+            <address>4700 W Prospect Rd #103,<br><br>
+                Fort Lauderdale, FL, 33309</address>
+
+
+        <div id="contactUsNoticeContent" class="content">
+            <strong>Contact Us </strong>
+            <p>TIf you have business inquiries or other questions, please fill out the following form to contact us.
+                Thank you.</p>
+        </div>
+
+        <div class="contact_fields_wrapper clearfix">
+            <div class="row">
+                <div class="contacts_left_fields col-xs-12 col-sm-6">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                    <div class="form-group contact-group">
 
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-
-                    <?= $form->field($model, 'email') ?>
-
-                    <?= $form->field($model, 'subject') ?>
-
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
-
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
-
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label("Full Name:") ?>
+<!--                        <input name="contactname" size="40" id="contactname" class="form-control" type="text">-->
                     </div>
+
+                    <div class="form-group contact-group">
+
+                        <?= $form->field($model, 'email')->label("Email Address:") ?>
+                    </div>
+
+                    <div class="form-group contact-group">
+                        <?= $form->field($model, 'body')->textarea(['rows' => 6])->label("Message:") ?>
+                    </div>
+
+                    <div class="form-group contact-group">
+                        <?= Html::submitButton('Send Now', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+
+                    </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.367671393911!2d-80.17563058486871!3d26.184715383446548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d903e458c65ab3%3A0x44fb0a1bff1175f2!2s4700+W+Prospect+Rd%2C+Fort+Lauderdale%2C+FL+33309!5e0!3m2!1sen!2sus!4v1498756019853" width="550" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
 
                 <?php ActiveForm::end(); ?>
 
-            </div>
-        </div>
 
+
+        </div>
+    </div>
     <?php endif; ?>
+</div>
 </div>
