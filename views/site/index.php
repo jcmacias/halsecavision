@@ -73,12 +73,10 @@ $this->title = 'My Yii Application';
                                 <ul class="prod-list1 clearfix w25">
 
                                     <li class="centerBoxContentsFeatured centeredContent back  i1" style="width:25%;"><div class="product-col" data-match-height="featured">
-                                            <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=2&amp;products_id=6&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Plumb Pak 12-in Brass Push Fit In-Line Straight Valve</a></h5>
+                                            <h5><a class="product-name name" href="">Plumb Pak 12-in Brass Push Fit In-Line Straight Valve</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=2&amp;products_id=6&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/06.png" class="img-responsive" alt="Plumb Pak 12-in Brass Push Fit In-Line Straight Valve" title=" Plumb Pak 12-in Brass Push Fit In-Line Straight Valve " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSalePrice">$83.00</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -91,9 +89,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=3&amp;products_id=10&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Vigo One Handle Single Hole Pull Out Spray Kitchen Faucet</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=3&amp;products_id=10&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/10.png" class="img-responsive" alt="Vigo One Handle Single Hole Pull Out Spray Kitchen Faucet" title=" Vigo One Handle Single Hole Pull Out Spray Kitchen Faucet " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSalePrice">$732.00</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -106,9 +102,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=4&amp;products_id=15&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Watts 1-in x 1-ft Reinforced PVC Reinforced Braided Vinyl Tu</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=4&amp;products_id=15&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/15.png" class="img-responsive" alt="Watts 1-in x 1-ft Reinforced PVC Reinforced Braided Vinyl Tubing" title=" Watts 1-in x 1-ft Reinforced PVC Reinforced Braided Vinyl Tubing " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSpecialPrice">$213.50</span><span class="normalprice">$305.00 </span><span class="productPriceDiscount">-30%</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -121,9 +115,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=5&amp;products_id=19&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Yosemite Home Decor One Handle Centerset Bathroom Faucet - Y</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=5&amp;products_id=19&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/19.png" class="img-responsive" alt="Yosemite Home Decor One Handle Centerset Bathroom Faucet - YP42V" title=" Yosemite Home Decor One Handle Centerset Bathroom Faucet - YP42V " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSalePrice">$785.32</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -138,9 +130,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=5&amp;products_id=18&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Whitehaus Collection Forever Hot One Handle Single Hole Drin</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=5&amp;products_id=18&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/18.png" class="img-responsive" alt="Whitehaus Collection Forever Hot One Handle Single Hole Drinking" title=" Whitehaus Collection Forever Hot One Handle Single Hole Drinking " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSalePrice">$292.00</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -153,9 +143,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=3&amp;products_id=11&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Vigo Single Hole Waterfall Bathroom Faucet Less Handles - VG</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=3&amp;products_id=11&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/11.png" class="img-responsive" alt="Vigo Single Hole Waterfall Bathroom Faucet Less Handles - VG0300" title=" Vigo Single Hole Waterfall Bathroom Faucet Less Handles - VG0300 " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSpecialPrice">$522.40</span><span class="normalprice">$653.00 </span><span class="productPriceDiscount">-20%</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -168,9 +156,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=3&amp;products_id=12&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Vigo Tempered Glass Bathroom Sink - VG07505</a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=3&amp;products_id=12&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/12.png" class="img-responsive" alt="Vigo Tempered Glass Bathroom Sink - VG07505" title=" Vigo Tempered Glass Bathroom Sink - VG07505 " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSpecialPrice">$105.40</span><span class="normalprice">$124.00 </span><span class="productPriceDiscount">-15%</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
@@ -183,9 +169,7 @@ $this->title = 'My Yii Application';
                                             <h5><a class="product-name name" href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=5&amp;products_id=17&amp;zenid=40mv0tfoegcguu0cep33hhokj3">Whirlpool 6th Sense 50-Gallon 12-Year Tall Gas Water Heater </a></h5>
                                             <div class="img">
                                                 <a href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;cPath=5&amp;products_id=17&amp;zenid=40mv0tfoegcguu0cep33hhokj3"><img src="images/17.png" class="img-responsive" alt="Whirlpool 6th Sense 50-Gallon 12-Year Tall Gas Water Heater (Nat" title=" Whirlpool 6th Sense 50-Gallon 12-Year Tall Gas Water Heater (Nat " width="200" height="200" /></a>
-                                                <div class="price">
-                                                    <strong><span class="productSalePrice">$353.00</span></strong>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="prod-info">
