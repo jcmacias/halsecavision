@@ -38,6 +38,9 @@ class ProductController extends Controller
     {
         $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination = ['defaultPageSize' => 8];
+
+
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -53,8 +56,11 @@ class ProductController extends Controller
      */
     public function actionView($id, $category_id)
     {
+        $product = new Product();
+        $related = $product->getRelated($category_id);
         return $this->render('view', [
             'model' => $this->findModel($id, $category_id),
+            'related'=> $related
         ]);
     }
 

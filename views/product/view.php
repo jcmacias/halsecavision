@@ -1,7 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+use circulon\widgets\ColumnListView;
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Product */
@@ -145,88 +146,23 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h2 class="centerBoxHeading clearfix">Related Products</h2>
                                 <div class="row">
 
-                                    <div class="col-xs-12 col-sm-4 col-md-2">
-                                        <div data-match-height="items-e" class="product-col" style="height: 325px;">
-                                            <div class="img"><a
-                                                    href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=2"><img
-                                                        src="images/02.png" class="img-responsive"
-                                                        alt="Plumb Craft 5 Position Hand Held Shower Head - 8661"
-                                                        title=" Plumb Craft 5 Position Hand Held Shower Head - 8661 "
-                                                        width="114" height="114"></a></div>
-                                            <div class="prod-info"><a class="product-name name"
-                                                                      href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=2">Plumb
-                                                    Craft 5 Position Hand Held Shower Head - 8661</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-2">
-                                        <div data-match-height="items-e" class="product-col" style="height: 325px;">
-                                            <div class="img"><a
-                                                    href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=3"><img
-                                                        src="images/03.png" class="img-responsive"
-                                                        alt="Plumb Craft 6 Spray Setting Fixed Shower Head - 8674000"
-                                                        title=" Plumb Craft 6 Spray Setting Fixed Shower Head - 8674000 "
-                                                        width="114" height="114"></a></div>
-                                            <div class="prod-info"><a class="product-name name"
-                                                                      href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=3">Plumb
-                                                    Craft 6 Spray Setting Fixed Shower Head - 8674000</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-2">
-                                        <div data-match-height="items-e" class="product-col" style="height: 325px;">
-                                            <div class="img"><a
-                                                    href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=4"><img
-                                                        src="images/04.png" class="img-responsive"
-                                                        alt="Plumb Craft Acrylic Handle with Skirt Faucet Replacement"
-                                                        title=" Plumb Craft Acrylic Handle with Skirt Faucet Replacement "
-                                                        width="114" height="114"></a></div>
-                                            <div class="prod-info"><a class="product-name name"
-                                                                      href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=4">Plumb
-                                                    Craft Acrylic Handle with Skirt Faucet Replacement</a></div>
-                                        </div>
-                                    </div>
+                                    <?php Pjax::begin(); ?>    <?= ColumnListView::widget([
+                                        'dataProvider' => $related,
+                                        'columns' => 6, // default : 1
+                                        'itemView' => '_related',
+                                        'pager' => [
+                                            'firstPageLabel' => 'first',
+                                            'lastPageLabel' => 'last',
+                                            'prevPageLabel' => 'previous',
+                                            'nextPageLabel' => 'next',
+                                            'maxButtonCount' => 3,
+                                        ],
+                                        'layout' => "{items}\n{pager}",
 
+                                    ])
 
-                                    <div class="col-xs-12 col-sm-4 col-md-2">
-                                        <div data-match-height="items-e" class="product-col" style="height: 325px;">
-                                            <div class="img"><a
-                                                    href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=5"><img
-                                                        src="images/05.png" class="img-responsive"
-                                                        alt="Plumb Craft Toilet Tank Fill Valve"
-                                                        title=" Plumb Craft Toilet Tank Fill Valve " width="114"
-                                                        height="114"></a></div>
-                                            <div class="prod-info"><a class="product-name name"
-                                                                      href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=5">Plumb
-                                                    Craft Toilet Tank Fill Valve</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-2">
-                                        <div data-match-height="items-e" class="product-col" style="height: 325px;">
-                                            <div class="img"><a
-                                                    href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=6"><img
-                                                        src="images/06.png" class="img-responsive"
-                                                        alt="Plumb Pak 12-in Brass Push Fit In-Line Straight Valve"
-                                                        title=" Plumb Pak 12-in Brass Push Fit In-Line Straight Valve "
-                                                        width="114" height="114"></a></div>
-                                            <div class="prod-info"><a class="product-name name"
-                                                                      href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=6">Plumb
-                                                    Pak 12-in Brass Push Fit In-Line Straight Valve</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-2">
-                                        <div data-match-height="items-e" class="product-col" style="height: 325px;">
-                                            <div class="img"><a
-                                                    href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=7"><img
-                                                        src="images/07.png" class="img-responsive"
-                                                        alt="Schon 13 x 17 Single Bowl Zero Radius Bar Sink"
-                                                        title=" Schon 13 x 17 Single Bowl Zero Radius Bar Sink "
-                                                        width="114" height="114"></a></div>
-                                            <div class="prod-info"><a class="product-name name"
-                                                                      href="http://livedemo00.template-help.com/zencart_55417/index.php?main_page=product_info&amp;products_id=7">Schon
-                                                    13 x 17 Single Bowl Zero Radius Bar Sink</a></div>
-                                        </div>
-                                    </div>
-
-
+                           ?>
+                                    <?php Pjax::end(); ?>
                                 </div>
                             </div>
 

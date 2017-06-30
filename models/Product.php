@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\web\UploadedFile;
+use yii\data\ActiveDataProvider;
 /**
  * This is the model class for table "product".
  *
@@ -114,5 +115,35 @@ class Product extends \yii\db\ActiveRecord
         $pic = isset($this->image) ? $this->image : 'default.png';
         return Yii::$app->params['fileUploadUrl'] . $pic;
     }
+
+     public function getRelated($cat) {
+
+         $query = $this->find()->where(['category_id' => $cat]);
+
+         $provider = new ActiveDataProvider([
+
+             'query' => $query,
+             'pagination' => [
+                 'pageSize' => 6,
+             ],
+
+
+         ]);
+
+         return $provider;
+     }
+
+     public function getFeatured () {
+         $query = $this->find();
+
+         $provider = new ActiveDataProvider([
+             'query'=> $query,
+             'pagination' => [
+                 'pageSize' => 8
+             ],
+         ]);
+
+         return $provider;
+     }
 
 }

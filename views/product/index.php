@@ -25,20 +25,23 @@ $this->params['breadcrumbs'][] = $this->title;
             'dataProvider' => $dataProvider,
             'columns' => 3, // default : 1
             'itemView' => '_item',
+            'pager' => [
+                'firstPageLabel' => 'first',
+                'lastPageLabel' => 'last',
+                'prevPageLabel' => 'previous',
+                'nextPageLabel' => 'next',
+                'maxButtonCount' => 3,
+            ],
+            'layout' => "{items}\n{pager}",
+
 //            'itemView' => function ($model, $key, $index, $widget) {
 //                        return Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id]);
 //                    },
 
         ])
 
-//        ListView::widget([
-//            'dataProvider' => $dataProvider,
-//            'itemOptions' => ['class' => 'item'],
-//            'itemView' => function ($model, $key, $index, $widget) {
-//                return Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id]);
-//            },
-//        ])
         ?>
-        <?php Pjax::end(); ?></div>
+        <?php Pjax::end(); ?>
+    </div>
 </div>
 
