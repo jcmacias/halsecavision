@@ -327,10 +327,21 @@ $bodyHomeIndex=1;
 
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/index']);?>">Home</a></li>
-                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['product/index']);?>">Product<span class="label">New!</span></a></li>
+                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['product/index']);?>">Product</a>
+                                        </li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['purchase/index']);?>">Purchase</a></li>
-                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['category/index']);?>">Categories<span class="label">New!</span></a></li>
-                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/']);?>">How Work</a></li>
+<!--                                    <lu class="quicklinks-li"><a  class="drop" href="--><?//= Url::to(['category/index']);?><!--">Categories</a></lu>-->
+
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Dropdown</button>
+                                        <div class="dropdown-content">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </div>
+
+                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/']);?>">How Works</a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/about']);?>">About</a></li>
                                     <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['site/contact']);?>">Contact</a></li>
 
