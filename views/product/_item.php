@@ -24,7 +24,7 @@ use yii\helpers\Url;
         </div>
         <div class="product-buttons">
             <div class="content_price">
-                <span itemprop="price" class="price product-price"><span class="productSalePrice">$550.00</span></span>
+
                 <div class="clearfix"></div>
                 <div class="button"><a class="btn add-to-cart"
                                        href="#"><span
@@ -39,7 +39,7 @@ use yii\helpers\Url;
                             onmouseout="this.className='cssButton normal_button button  button_goto_prod_details'">&nbsp;Details&nbsp;</span></a>
                 </div>
                 <br></div>
-            <div class="buttons">null</div>
+
         </div>
     </div>
 </div>

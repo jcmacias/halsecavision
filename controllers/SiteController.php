@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Product;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -61,7 +62,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new Product();
+        $featured = $model->getFeatured();
+        return $this->render('index',[
+            'featured' => $featured
+        ]);
     }
 
     /**
