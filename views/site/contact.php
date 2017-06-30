@@ -7,11 +7,11 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+
 //
 //$this->title = 'Contact';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-
 
 
 <div class="site-contact">
@@ -29,7 +29,8 @@ use yii\captcha\Captcha;
             <?php if (Yii::$app->mailer->useFileTransport): ?>
                 Because the application is in development mode, the email is not sent but saved as
                 a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
+                                                                                                    Please configure the
+                <code>useFileTransport</code> property of the <code>mail</code>
                 application component to be false to enable email sending.
             <?php endif; ?>
         </p>
@@ -40,69 +41,100 @@ use yii\captcha\Captcha;
 
     <div class="container">
 
-    <h2 class="centerBoxHeading h2BoxHeading">Contact Us</h2>
+        <h2 class="centerBoxHeading h2BoxHeading">Contact Us</h2>
 
         <div class="form-control-block">
+
             <input name="securityToken" value="1b0ff7e4cc5cd8f42fa109a146e90e52" type="hidden">
-            <address>4700 W Prospect Rd #103,<br><br>
-                Fort Lauderdale, FL, 33309</address>
-
-
-        <div id="contactUsNoticeContent" class="content">
-            <strong>Contact Us </strong>
-            <p>TIf you have business inquiries or other questions, please fill out the following form to contact us.
-                Thank you.</p>
-        </div>
-
-        <div class="contact_fields_wrapper clearfix">
-            <div class="row">
-                <div class="contacts_left_fields col-xs-12 col-sm-6">
-
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-                    <div class="form-group contact-group">
-
-                        <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label("Full Name:") ?>
-<!--                        <input name="contactname" size="40" id="contactname" class="form-control" type="text">-->
-                    </div>
-
-                    <div class="form-group contact-group">
-
-                        <?= $form->field($model, 'email')->label("Email Address:") ?>
-                    </div>
-
-                    <div class="form-group contact-group">
-                        <?= $form->field($model, 'body')->textarea(['rows' => 6])->label("Message:") ?>
-                    </div>
-
-                    <div class="form-group contact-group">
-                        <?= Html::submitButton('Send Now', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-
-                    </div>
-
+            <div id="contactUsNoticeContent" class="content">
+                <strong>Contact Us </strong>
+                <p>If you have business inquiries or other questions, please fill out the following form to contact us.
+                    Thank you.</p>
             </div>
 
-            <div class="col-xs-12 col-sm-6">
+            <div class="contact_fields_wrapper clearfix">
+                <div class="row">
+                    <div class="contacts_left_fields col-xs-12 col-sm-6">
+
+                        <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                        <div class="form-group contact-group">
+
+                            <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label("Full Name:") ?>
+                            <!--                        <input name="contactname" size="40" id="contactname" class="form-control" type="text">-->
+                        </div>
+
+                        <div class="form-group contact-group">
+
+                            <?= $form->field($model, 'email')->label("Email Address:") ?>
+                        </div>
+
+                        <div class="form-group contact-group">
+                            <?= $form->field($model, 'body')->textarea(['rows' => 6])->label("Message:") ?>
+                        </div>
+
+                        <div class="form-group contact-group">
+                            <?= Html::submitButton('Send Now', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
 
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.367671393911!2d-80.17563058486871!3d26.184715383446548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d903e458c65ab3%3A0x44fb0a1bff1175f2!2s4700+W+Prospect+Rd%2C+Fort+Lauderdale%2C+FL+33309!5e0!3m2!1sen!2sus!4v1498756019853" width="550" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.367671393911!2d-80.17563058486871!3d26.184715383446548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d903e458c65ab3%3A0x44fb0a1bff1175f2!2s4700+W+Prospect+Rd%2C+Fort+Lauderdale%2C+FL+33309!5e0!3m2!1sen!2sus!4v1498756019853"
+                            width="550" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-            </div>
-
-
-
-
-        </div>
+                    </div>
 
 
-
+                </div>
 
 
                 <?php ActiveForm::end(); ?>
 
 
+            </div>
 
+            <div class="content border-grey ">
+                <div class="row content " id="ourTeamContent">
+                    <strong>Our Team </strong>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-3">
+
+                        <span>Management Department.</span>
+                        <span><a href="mailto:manager@halsecavision.net">manager@halsecavision.net</a></span>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <span>Sales Representative.</span>
+                        <span><a href="mailto:sale@halsecavision.net">sale@halsecavision.net</a></span>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <span>Technical Support.</span>
+                        <span><a href="mailto:techsupport@halsecavision.net">techsupport@halsecavision.net</a></span>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <span>CEO.</span> <br>
+                        <span><a href="mailto:ceo@halsecavision.net">ceo@halsecavision.net</a></span>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
+        <?php endif; ?>
     </div>
-    <?php endif; ?>
-</div>
 </div>

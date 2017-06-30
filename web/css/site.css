@@ -123,3 +123,40 @@ a.desc:after {
 .h2BoxHeadingab{
     margin: 50px 0 30px 0;
 }
+.border-grey{
+    border: 1px solid #d1d1d1;
+    padding: 15px 10px 40px 10px;
+}
+
+#ourTeamContent {
+    color: #777;
+    font: 400 14px/18px "Open Sans", sans-serif;
+    margin-left: auto;
+    padding: 10px 0 10px 0px;
+
+}
+
+.imagen-about{
+    width: 20%;
+    padding-left: 15px;
+
+}
+
+.imagen-about-blue{
+    width: 20%;
+    padding-right: 15px;
+
+
+}
+
+.box-grey-about{
+    margin-left: 225px;
+    margin-right: 124px;
+
+}
+
+.box-blue-about{
+    margin-left: 124px;
+    margin-right: 225px;
+    
+}
