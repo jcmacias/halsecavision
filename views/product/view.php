@@ -92,7 +92,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <ul class="instock">
                                         <li><strong>Shipping Weight: </strong>2lbs</li>
                                         <li><strong>Manufactured by: </strong>Gerber</li>
-                                        <li><strong><a target="_blank" href="/pdf/<?= $model->fulldescription ?>">Full Description </a></strong>PDF</li>
+                                        <?php if($model->fulldescription) { ?>
+                                         <li><strong><a target="_blank" href="/pdf/<?= $model->fulldescription ?>">Full Description </a></strong>PDF</li>
+                                        <?php } ?>
                                     </ul>
                                     <!--eof Product details list  -->
                                     <div class="wrapper atrib2">

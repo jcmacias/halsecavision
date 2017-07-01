@@ -2,8 +2,8 @@
 use yii\helpers\Url;
 
 ?>
-<div class="product-col" data-match-height="featured" style="height: 183px;">
-    <h5><a class="product-name name"
+<div class="product-col simpleCart_shelfItem" data-match-height="featured" style="height: 183px;">
+    <h5><a class="product-name name item_name"
            href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><?= $model->name; ?></a></h5>
     <div class="img">
         <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
@@ -14,9 +14,10 @@ use yii\helpers\Url;
     </div>
     <div class="clearfix"></div>
     <div class="prod-info">
+        <input type="hidden" value="1" class="item_Quantity">
         <div class="product-buttons">
-            <div class="button"><a class="btn add-to-cart"
-                                   href="#"><span
+            <div class="button"><a class="btn add-to-cart item_add"
+                                   href="javascript:;"><span
                         class="cssButton normal_button button  button_add_to_cart"
                         onmouseover="this.className='cssButtonHover normal_button button  button_add_to_cart button_add_to_cartHover'"
                         onmouseout="this.className='cssButton normal_button button  button_add_to_cart'">&nbsp;Add to Cart&nbsp;</span></a>

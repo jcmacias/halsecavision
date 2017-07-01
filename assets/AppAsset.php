@@ -54,6 +54,8 @@ class AppAsset extends AssetBundle
         'js/jscript_xjquery.jqtransform.js',
         'js/jscript_xjquery.lightbox-0.5.js',
         'js/jscript_xjscript_script.app.js',
+        'js/simpleCart.js',
+         'js/app.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

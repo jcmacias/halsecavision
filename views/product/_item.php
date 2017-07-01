@@ -10,12 +10,12 @@ use yii\helpers\HtmlPurifier;
 use yii\helpers\Url;
 
 ?>
-<div class="product-col">
+<div class="product-col simpleCart_shelfItem">
     <div class="img">
         <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
                 src="/images/01.jpg" class="img-responsive" alt="Oatey 316-in x 5-ft Rubber Utility Hose"
                 title=" Oatey 316-in x 5-ft Rubber Utility Hose " width="200" height="200"></a></div>
-    <div class="prod-info"><h5 itemprop="name">
+    <div class="prod-info"><h5 itemprop="name item_name">
             <?= Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id],['class' => 'product-name name']);?>
         </h5>
         <div itemprop="description" class="text">
@@ -26,8 +26,9 @@ use yii\helpers\Url;
             <div class="content_price">
 
                 <div class="clearfix"></div>
-                <div class="button"><a class="btn add-to-cart"
-                                       href="#"><span
+                <input type="hidden" value="1" class="item_Quantity">
+                <div class="button"><a class="btn add-to-cart item_add"
+                                       href="javascript:;"><span
                             class="cssButton normal_button button  button_add_to_cart"
                             onmouseover="this.className='cssButtonHover normal_button button  button_add_to_cart button_add_to_cartHover'"
                             onmouseout="this.className='cssButton normal_button button  button_add_to_cart'">&nbsp;Add to Cart&nbsp;</span></a>
