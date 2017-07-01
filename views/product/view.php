@@ -43,14 +43,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         aria-hidden="true"
                                                         title="Facebook Cross Domain Communication Frame" tabindex="-1"
                                                         style="border: medium none;"
-                                                        src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f1dcd8fd888f3e&amp;origin=http%3A%2F%2Flivedemo00.template-help.com"
+                                                        src="#"
                                                         frameborder="0"></iframe>
                                                 <iframe name="fb_xdm_frame_https" allowtransparency="true"
                                                         allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https"
                                                         aria-hidden="true"
                                                         title="Facebook Cross Domain Communication Frame" tabindex="-1"
                                                         style="border: medium none;"
-                                                        src="https://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f1dcd8fd888f3e&amp;origin=http%3A%2F%2Flivedemo00.template-help.com"
+                                                        src="#"
                                                         frameborder="0"></iframe>
                                             </div>
                                         </div>
@@ -92,6 +92,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <ul class="instock">
                                         <li><strong>Shipping Weight: </strong>2lbs</li>
                                         <li><strong>Manufactured by: </strong>Gerber</li>
+                                        <li><strong><a target="_blank" href="/pdf/<?= $model->fulldescription ?>">Full Description </a></strong>PDF</li>
                                     </ul>
                                     <!--eof Product details list  -->
                                     <div class="wrapper atrib2">

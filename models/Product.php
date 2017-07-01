@@ -14,6 +14,8 @@ use yii\data\ActiveDataProvider;
  * @property string $description
  * @property string $image
  * @property integer $qty_store
+ * @property integer $featured
+ * @property integer $fulldescription
  * @property double $price
  * @property integer $category_id
  *
@@ -25,6 +27,7 @@ class Product extends \yii\db\ActiveRecord
 {
 
     public $upload_file;
+    public $upload_pdf;
 
     /**
      * @inheritdoc
@@ -49,6 +52,7 @@ class Product extends \yii\db\ActiveRecord
             [['code'], 'unique'],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
             [['upload_file'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
+            [['upload_pdf'], 'file', 'skipOnEmpty' => true, 'extensions' => 'pdf'],
         ];
     }
 
@@ -63,7 +67,10 @@ class Product extends \yii\db\ActiveRecord
             'name' => 'Name',
             'description' => 'Description',
             'image' => 'Image',
+            'featured'=>'Featured',
             'upload_file' => 'Upload File',
+            'fulldescription'=>'Full description',
+            'upload_pdf'=>'Full description PDF',
             'qty_store' => 'Qty Store',
             'price' => 'Price',
             'category_id' => 'Category ID',
@@ -116,6 +123,23 @@ class Product extends \yii\db\ActiveRecord
         return Yii::$app->params['fileUploadUrl'] . $pic;
     }
 
+    public function uploadPDF() {
+        $pdf = UploadedFile::getInstance($this, 'upload_pdf');
+
+        if (empty($pdf)) {
+            return false;
+        }
+
+        $this->fulldescription = time().'.'.$pdf->extension;
+
+        return $pdf;
+    }
+
+    public function getUploadPDF () {
+        $file = isset($this->fulldescription) ? $this->fulldescription : 'none';
+        return Yii::$app->params['pdfUploadUrl'] . $file;
+    }
+
      public function getRelated($cat) {
 
          $query = $this->find()->where(['category_id' => $cat]);
@@ -134,7 +158,7 @@ class Product extends \yii\db\ActiveRecord
      }
 
      public function getFeatured () {
-         $query = $this->find();
+         $query = $this->find()->where(['featured' => 1]);
 
          $provider = new ActiveDataProvider([
              'query'=> $query,

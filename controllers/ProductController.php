@@ -74,7 +74,9 @@ class ProductController extends Controller
         $model = new Product();
 
         if ($model->load(Yii::$app->request->post())) {
-
+            $form=Yii::$app->request->post();
+            $model->featured=(int)$form['Product']['featured'];
+            $upload_pdf = $model->uploadPDF();
             $upload_file = $model->uploadFile();
 
             var_dump($model->validate());
@@ -84,6 +86,10 @@ class ProductController extends Controller
                     if ($upload_file !== false) {
                         $path = $model->getUploadedFile();
                         $upload_file->saveAs($path);
+                    }
+                    if ($upload_pdf !== false) {
+                        $path1 = $model->getUploadPDF();
+                        $upload_pdf->saveAs($path1);
                     }
 
                     return $this->redirect(['view', 'id' => $model->id, 'category_id' => $model->category_id]);
@@ -109,8 +115,15 @@ class ProductController extends Controller
     {
         $model = $this->findModel($id, $category_id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'category_id' => $model->category_id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $form=Yii::$app->request->post();
+            $model->featured=(int)$form['Product']['featured'];
+            if($model->save()){
+
+                return $this->redirect(['view', 'id' => $model->id, 'category_id' => $model->category_id]);
+            }
+
+
         } else {
             return $this->render('update', [
                 'model' => $model,

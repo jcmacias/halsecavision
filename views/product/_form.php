@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 //use kartik\form\ActiveForm;
 //use kartik\widgets\FileInput;
-
+use kartik\checkbox\CheckboxX;
 /* @var $this yii\web\View */
 /* @var $model app\models\Product */
 /* @var $form yii\widgets\ActiveForm */
@@ -24,6 +24,9 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'qty_store')->textInput() ?>
 
+    <?= $form->field($model, 'featured')->widget(CheckboxX::classname(), []);
+    ?>
+
     <?= $form->field($model, 'price')->textInput() ?>
     <?php
 
@@ -40,6 +43,8 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'upload_file')->fileInput() ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'upload_pdf')->fileInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

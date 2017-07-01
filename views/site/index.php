@@ -86,7 +86,7 @@ $this->title = 'My Yii Application';
                                         'nextPageLabel' => 'next',
                                         'maxButtonCount' => 3,
                                     ],
-                                    'layout' => "{items}\n{pager}",
+                                    'layout' => "{items}",
 
                                 ])
 
