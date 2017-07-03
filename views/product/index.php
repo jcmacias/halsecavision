@@ -9,12 +9,12 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Products';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container">
     <div class="product-index">
 
-        <h2 class="centerBoxHeading"><?= Html::encode($this->title) ?></h2>
+        <h2 class="centerBoxHeading h2BoxHeadingab"><?= Html::encode($this->title) ?></h2>
         <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
         <p>

@@ -361,7 +361,50 @@ $bodyHomeIndex = 1;
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>">Home</a>
                                     </li>
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['product/index']); ?>">Product</a>
+                                    <li class="quicklinks-li "><a class="drop" href="<?= Url::to(['product/index']); ?>">Product</a>
+
+                                           <div class="dropdown col-2 ">
+                                            <div class="firstcolumn">
+                                                <nav>
+                                                    <ul class="ez-menu">
+
+                                                        <li class="  first">
+                                                            <a href="">
+                                                                <span>PTZ Camera</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="  ">
+                                                            <a href="">
+                                                                <span>NVR/XVR</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="  ">
+                                                            <a href="">
+                                                                <span>Kits</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="  ">
+                                                            <a href="">
+                                                                <span>Cameras</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class=" last ">
+                                                            <a href="">
+                                                                <span>Controls</span>
+                                                            </a>
+                                                        </li>
+                                                        <div class="clearfix"></div>
+
+                                                    </ul>
+                                                </nav>
+
+                                            </div>
+                                        </div>
+                                        <span class="plus"></span></li>
                                     </li>
                                     <li class="quicklinks-li"><a class="drop"
                                                                  href="<?= Url::to(['purchase/index']); ?>">Purchase</a>
@@ -369,14 +412,6 @@ $bodyHomeIndex = 1;
                                     <!--                                    <lu class="quicklinks-li"><a  class="drop" href="-->
                                     <? //= Url::to(['category/index']);?><!--">Categories</a></lu>-->
 
-                                    <div class="dropdown">
-                                        <button class="dropbtn">Dropdown</button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
-                                        </div>
-                                    </div>
 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/']); ?>">How
                                             Works</a></li>
