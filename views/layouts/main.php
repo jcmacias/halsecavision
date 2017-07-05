@@ -326,9 +326,27 @@ $bodyHomeIndex = 1;
                         <div class="shopping_cart" id="shopping_cart">
                             <!-- ========== SHOPPING CART ========== -->
                             <div class="shop-box-wrap">
-                                <span class="cart_title">Purchace List</span><span class="st3 simpleCart_quantity"> (empty) </span></div>
+                                <span class="cart_title">Purchace List</span><span class="st3 simpleCart_quantity"> (empty) </span>
+                            </div>
                             <div class="shopping_cart_content" id="shopping_cart_content">
-                                <div class="none simpleCart_items"> Your list is empty</div>
+                                <ul class="cart-down">
+                                    <li class="cart_item simpleCart_items">
+
+                                    </li>
+                                    <li>
+                                        <div class="cart-price-total">
+                                            <strong>Total:</strong>&nbsp;<span class="simpleCart_quantity"></span></div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-bottom">
+                                            <a class="btn btn-success1" id="check"
+                                               href="<?= Url::to(['purchase/create']); ?>"><span
+                                                    class="cssButton normal_button button  button_checkout simpleCart_checkout"
+                                                    onmouseover="this.className='cssButtonHover normal_button button  button_checkout button_checkoutHover'"
+                                                    onmouseout="this.className='cssButton normal_button button  button_checkout'">&nbsp;Send <i class="fa fa-send"></i>&nbsp;</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <!-- =================================== -->
@@ -361,9 +379,10 @@ $bodyHomeIndex = 1;
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>">Home</a>
                                     </li>
-                                    <li class="quicklinks-li "><a class="drop" href="<?= Url::to(['product/index']); ?>">Product</a>
+                                    <li class="quicklinks-li "><a class="drop"
+                                                                  href="<?= Url::to(['product/index']); ?>">Product</a>
 
-                                           <div class="dropdown col-2 ">
+                                        <div class="dropdown col-2 ">
                                             <div class="firstcolumn">
                                                 <nav>
                                                     <ul class="ez-menu">
