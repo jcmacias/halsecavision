@@ -326,9 +326,27 @@ $bodyHomeIndex = 1;
                         <div class="shopping_cart" id="shopping_cart">
                             <!-- ========== SHOPPING CART ========== -->
                             <div class="shop-box-wrap">
-                                <span class="cart_title">Purchase List</span><span class="st3 simpleCart_quantity"> 0 </span></div>
+                                <span class="cart_title">Purchace List</span><span class="st3 simpleCart_quantity"> (empty) </span>
+                            </div>
                             <div class="shopping_cart_content" id="shopping_cart_content">
-                                <div class="none simpleCart_items"> Your list is empty</div>
+                                <ul class="cart-down">
+                                    <li class="cart_item simpleCart_items">
+
+                                    </li>
+                                    <li>
+                                        <div class="cart-price-total">
+                                            <strong>Total:</strong>&nbsp;<span class="simpleCart_quantity"></span></div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-bottom">
+                                            <a class="btn btn-success1" id="check"
+                                               href="<?= Url::to(['purchase/create']); ?>"><span
+                                                    class="cssButton normal_button button  button_checkout simpleCart_checkout"
+                                                    onmouseover="this.className='cssButtonHover normal_button button  button_checkout button_checkoutHover'"
+                                                    onmouseout="this.className='cssButton normal_button button  button_checkout'">&nbsp;Send <i class="fa fa-send"></i>&nbsp;</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <!-- =================================== -->
@@ -361,38 +379,44 @@ $bodyHomeIndex = 1;
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>">Home</a>
                                     </li>
-                                    <li class="quicklinks-li "><a class="drop" href="<?= Url::to(['product/index']); ?>">Products</a>
+                                    <li class="quicklinks-li "><a class="drop"
+                                                                  href="<?= Url::to(['product/index']); ?>">Product</a>
 
-                                           <div class="dropdown col-2 ">
+                                        <div class="dropdown col-2 ">
                                             <div class="firstcolumn">
                                                 <nav>
                                                     <ul class="ez-menu">
 
                                                         <li class="  first">
+                                                            
                                                             <a href="<?= Url::to(['category/view', 'id' => 1]); ?>">
                                                                 <span>PTZ Camera</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="  ">
+                                                            
                                                             <a href="<?= Url::to(['category/view', 'id' => 2]); ?>">
                                                                 <span>NVR/XVR</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="  ">
+                                                            
                                                             <a href="<?= Url::to(['category/view', 'id' => 3]); ?>">
                                                                 <span>Kits</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="  ">
+                                                           
                                                             <<a href="<?= Url::to(['category/view', 'id' => 4]); ?>">
                                                                 <span>Cameras</span>
                                                             </a>
                                                         </li>
 
                                                         <li class=" last ">
+                                                           
                                                             <a href="<?= Url::to(['category/view', 'id' => 5]); ?>">
                                                                 <span>Controls</span>
                                                             </a>
@@ -407,8 +431,10 @@ $bodyHomeIndex = 1;
                                         <span class="plus"></span></li>
                                     </li>
                                     <li class="quicklinks-li"><a class="drop"
+                                                                 
                                                                  href="<?= Url::to(['purchase/index']); ?>">Purchase List</a>
                                     </li>
+                                
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>">How Works</a></li>
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>">About</a>
                                     </li>
@@ -461,6 +487,7 @@ $bodyHomeIndex = 1;
 
                         <div class="ezpagesFooterCol col1" style="width: 100%">
                             <ul>
+                               
                                 <li><a href="<?= Url::to(['site/index']); ?>">Home</a></li>
                                 <li><a href="<?= Url::to(['product/index']); ?>">Products</a></li>
                                 <li><a href="<?= Url::to(['purchase/index']); ?>">Purchase List</a></li>
@@ -472,8 +499,9 @@ $bodyHomeIndex = 1;
                     <div class="account col-xs-12 col-sm-3 mb">
                         <h2 class="title_btn2">Customers</h2>
                         <ul class="account_list">
-                            <li><a href="<?= Url::to(['site/contact']); ?>">Contact Us</a></li>
+                         <li><a href="<?= Url::to(['site/contact']); ?>">Contact Us</a></li>
                             <li><a href="<?= Url::to(['site/about']); ?>">About Us</a></li>
+                            
 
                     </div>
                     <div class="social col-xs-12 col-sm-3 mb">
@@ -481,6 +509,7 @@ $bodyHomeIndex = 1;
                         <ul class="social_list">
                             <li><a href="http://www.facebook.com">Facebook</a></li>
                             <li><a href="http://www.twitter.com">Twitter</a></li>
+                            
 
                         </ul>
                     </div>

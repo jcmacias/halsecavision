@@ -15,8 +15,8 @@ use yii\helpers\Url;
         <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
                 src="/images/01.jpg" class="img-responsive" alt="Oatey 316-in x 5-ft Rubber Utility Hose"
                 title=" Oatey 316-in x 5-ft Rubber Utility Hose " width="200" height="200"></a></div>
-    <div class="prod-info"><h5 itemprop="name item_name">
-            <?= Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id],['class' => 'product-name name']);?>
+    <div class="prod-info"><h5 itemprop="name">
+            <?= Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id],['class' => 'product-name name item_name']);?>
         </h5>
         <div itemprop="description" class="text">
             <span class="list-desc" style="display: none;"><?= Html::encode($model->description) ?></span>

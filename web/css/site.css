@@ -122,11 +122,11 @@ a.desc:after {
 }
 .h2BoxHeadingab{
     margin: 50px 0 30px 0;
+}
 .product-col {
     margin-bottom: 10px;
 }
 
-}
 .border-grey{
     border: 1px solid #d1d1d1;
     padding: 15px 10px 40px 10px;
@@ -163,4 +163,12 @@ a.desc:after {
     margin-left: 124px;
     margin-right: 225px;
 
+}
+.simpleCart_items div{
+    float: left;
+    margin-right: 4px;
+}
+.item-name {
+    width: 149px;
+    font-weight: 700;
 }
