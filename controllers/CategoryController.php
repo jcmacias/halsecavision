@@ -51,8 +51,12 @@ class CategoryController extends Controller
      */
     public function actionView($id)
     {
+        $model1 = new Category();
+        $dataProvider = $model1->categoryProduct($id);
+
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'dataProvider' => $dataProvider,
         ]);
     }
 

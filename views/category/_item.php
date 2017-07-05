@@ -1,15 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Julio Cesar
- * Date: 6/28/2017
- * Time: 7:20 PM
- */
 use yii\helpers\Html;
-use yii\helpers\HtmlPurifier;
 use yii\helpers\Url;
-
 ?>
+
 <div class="product-col simpleCart_shelfItem">
     <div class="img">
         <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img

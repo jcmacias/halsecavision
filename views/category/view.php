@@ -2,18 +2,21 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use circulon\widgets\ColumnListView;
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Category */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Categories', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Categories', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container ">
 <div class="category-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h2 class="centerBoxHeading h2BoxHeadingab"><?= Html::encode($this->title) ?></h2>
+
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -26,15 +29,29 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            'description:ntext',
-            'category_id',
+
+
+    <?php Pjax::begin(); ?>    <?= ColumnListView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => 3, // default : 1
+        'itemView' => '_item',
+        'pager' => [
+            'firstPageLabel' => 'first',
+            'lastPageLabel' => 'last',
+            'prevPageLabel' => 'previous',
+            'nextPageLabel' => 'next',
+            'maxButtonCount' => 3,
         ],
-    ]) ?>
+        'layout' => "{items}\n{pager}",
+
+//            'itemView' => function ($model, $key, $index, $widget) {
+//                        return Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id]);
+//                    },
+
+    ])
+
+    ?>
+    <?php Pjax::end(); ?>
 
 </div>
 </div>

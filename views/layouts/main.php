@@ -326,7 +326,7 @@ $bodyHomeIndex = 1;
                         <div class="shopping_cart" id="shopping_cart">
                             <!-- ========== SHOPPING CART ========== -->
                             <div class="shop-box-wrap">
-                                <span class="cart_title">Purchace List</span><span class="st3 simpleCart_quantity"> (empty) </span></div>
+                                <span class="cart_title">Purchase List</span><span class="st3 simpleCart_quantity"> 0 </span></div>
                             <div class="shopping_cart_content" id="shopping_cart_content">
                                 <div class="none simpleCart_items"> Your list is empty</div>
                             </div>
@@ -361,7 +361,7 @@ $bodyHomeIndex = 1;
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>">Home</a>
                                     </li>
-                                    <li class="quicklinks-li "><a class="drop" href="<?= Url::to(['product/index']); ?>">Product</a>
+                                    <li class="quicklinks-li "><a class="drop" href="<?= Url::to(['product/index']); ?>">Products</a>
 
                                            <div class="dropdown col-2 ">
                                             <div class="firstcolumn">
@@ -369,31 +369,31 @@ $bodyHomeIndex = 1;
                                                     <ul class="ez-menu">
 
                                                         <li class="  first">
-                                                            <a href="">
+                                                            <a href="<?= Url::to(['category/view', 'id' => 1]); ?>">
                                                                 <span>PTZ Camera</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="  ">
-                                                            <a href="">
+                                                            <a href="<?= Url::to(['category/view', 'id' => 2]); ?>">
                                                                 <span>NVR/XVR</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="  ">
-                                                            <a href="">
+                                                            <a href="<?= Url::to(['category/view', 'id' => 3]); ?>">
                                                                 <span>Kits</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="  ">
-                                                            <a href="">
+                                                            <<a href="<?= Url::to(['category/view', 'id' => 4]); ?>">
                                                                 <span>Cameras</span>
                                                             </a>
                                                         </li>
 
                                                         <li class=" last ">
-                                                            <a href="">
+                                                            <a href="<?= Url::to(['category/view', 'id' => 5]); ?>">
                                                                 <span>Controls</span>
                                                             </a>
                                                         </li>
@@ -407,18 +407,15 @@ $bodyHomeIndex = 1;
                                         <span class="plus"></span></li>
                                     </li>
                                     <li class="quicklinks-li"><a class="drop"
-                                                                 href="<?= Url::to(['purchase/index']); ?>">Purchase</a>
+                                                                 href="<?= Url::to(['purchase/index']); ?>">Purchase List</a>
                                     </li>
-                                    <!--                                    <lu class="quicklinks-li"><a  class="drop" href="-->
-                                    <? //= Url::to(['category/index']);?><!--">Categories</a></lu>-->
-
-
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/']); ?>">How
-                                            Works</a></li>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>">How Works</a></li>
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>">About</a>
                                     </li>
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>">Contact</a>
                                     </li>
+
+                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['category/index']);?>">Categories</a></li>
 
                                 </ul><!-- eof mega-menu -->
 
@@ -464,32 +461,27 @@ $bodyHomeIndex = 1;
 
                         <div class="ezpagesFooterCol col1" style="width: 100%">
                             <ul>
-                                <li><a href="">Home</a></li>
-                                <li><a href="">New Products</a></li>
-                                <li><a href="">Specials</a></li>
-                                <li><a href="">All Products</a></li>
-                                <li><a href="">Reviews</a></li>
-                                <li><a href="">Contacts</a></li>
-                                <li><a href=" ">FAQs</a></li>
+                                <li><a href="<?= Url::to(['site/index']); ?>">Home</a></li>
+                                <li><a href="<?= Url::to(['product/index']); ?>">Products</a></li>
+                                <li><a href="<?= Url::to(['purchase/index']); ?>">Purchase List</a></li>
+
+
                             </ul>
                         </div>
                     </div>
                     <div class="account col-xs-12 col-sm-3 mb">
                         <h2 class="title_btn2">Customers</h2>
                         <ul class="account_list">
-                            <li><a href=" ">Log In</a></li>
-                            <li><a href="">Create Account</a></li>
-                            <li><a href="">Shipping &amp; Returns</a></li>
-                            <li><a href="">Privacy Notice</a></li>
-                            <li><a href="">Conditions of Use</a></li>
-                        </ul>
+                            <li><a href="<?= Url::to(['site/contact']); ?>">Contact Us</a></li>
+                            <li><a href="<?= Url::to(['site/about']); ?>">About Us</a></li>
+
                     </div>
                     <div class="social col-xs-12 col-sm-3 mb">
                         <h2 class="title_btn3">Follow Us</h2>
                         <ul class="social_list">
                             <li><a href="http://www.facebook.com">Facebook</a></li>
                             <li><a href="http://www.twitter.com">Twitter</a></li>
-                            <li><a href="#">RSS</a></li>
+
                         </ul>
                     </div>
                     <div class="contact-block col-xs-12 col-sm-3 mb">

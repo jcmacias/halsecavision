@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\data\ActiveDataProvider;
 
 /**
  * This is the model class for table "category".
@@ -75,5 +76,24 @@ class Category extends \yii\db\ActiveRecord
     public function getProducts()
     {
         return $this->hasMany(Product::className(), ['category_id' => 'id']);
+    }
+
+    public function categoryProduct($id)
+    {
+         $query1= $this->find()->where(['category_id' => $id ]);
+
+         $query = Product::find()->where(['category_id' => $id ]);
+
+            $provider = new ActiveDataProvider([
+
+                'query' => $query,
+                'pagination' => [
+                    'pageSize' => 8,
+                ],
+
+
+            ]);
+
+            return $provider;
     }
 }
