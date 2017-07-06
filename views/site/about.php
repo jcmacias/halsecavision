@@ -14,10 +14,8 @@ use yii\helpers\Html;
 
         <div class="content form-control-block">
 
-            <div class="row ">
-                <img src="/images/camera-orange.png" alt="camera halseca about" class="imagen-about">
-            </div>
-            <div class="border-grey box-grey-about">
+
+            <div class="border-grey">
                 <p>
 
                 <p><strong>Who we are?</strong></p>
@@ -36,14 +34,9 @@ use yii\helpers\Html;
                 </p>
             </div>
 
-
-
-
-                <div class="row ">
-                    <img src="/images/camera-blue.png" alt="camera halseca about" class="imagen-about-blue pull-right">
-                </div>
-
-            <div class="content form-control-block box-blue-about">
+            <br>
+            <br>
+            <div class="content form-control-block ">
 
                 <p><strong> Mission </strong></p>
                 <p>

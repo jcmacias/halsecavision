@@ -312,7 +312,7 @@ $bodyHomeIndex = 1;
                 <div class="row clearfix">
                     <div id="header_logo" class="col-xs-12 col-sm-3">
                         <!-- ========== LOGO ========== -->
-                        <a href="/"><img src="/images/logo.png" alt="" style="width: 365px;padding-top: 10px;"/></a>
+                        <a  href="/"><img class="img-responsive" src="/images/logo.png" alt="" style="padding-top: 10px;"/></a>
                         <!-- ========================== -->
                     </div>
                     <div class="col-xs-12 col-sm-9 col-md-9">
@@ -410,7 +410,7 @@ $bodyHomeIndex = 1;
 
                                                         <li class="  ">
                                                            
-                                                            <<a href="<?= Url::to(['category/view', 'id' => 4]); ?>">
+                                                            <a href="<?= Url::to(['category/view', 'id' => 4]); ?>">
                                                                 <span>Cameras</span>
                                                             </a>
                                                         </li>

@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 
 ?>
@@ -10,58 +11,80 @@ use yii\helpers\Html;
 
     <div class="container">
 
-        <h2 class="centerBoxHeading h2BoxHeadingab">How Halseca Vision Works</h2>
+        <h2 class="centerBoxHeading h2BoxHeadingab">How Works</h2>
 
-        <div class="content form-control-block">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="border-grey col-sm-10">
 
-            <div class="row ">
-                <img src="/images/camera-orange.png" alt="camera halseca about" class="imagen-about">
-            </div>
-            <div class="border-grey box-grey-about">
-                <p>
 
-                <p><strong>Who we are?</strong></p>
 
-                <strong>Halseca Vision</strong> is a brand of <strong>Halseca International Group L.L.C.</strong>,
-                dedicated to the area of manufacture, import, distribution and export of video equipment, cameras
-                (CCTV), and security recorders, both analogue, digital and hybrid technologies.
+
+                    <strong>How Halseca Vision works?</strong></p>
+
+                <p> We are dedicated to the area of manufacture, import, distribution and export of video equipment,
+                    cameras
+                    (CCTV), and security recorders, both analogue, digital and hybrid technologies.
                 </p>
 
+                <br>
+
+                    <strong>You have 3 way that you will contact us and order a product list</strong>
+
+                <br>
+
+                        <div class="col-sm-9"> <p> <strong>1. </strong> You can call our professional team at
+                                <a href="tel:+19549516477">(954) 951-6477</a> at our office hours : 8am-5pm M-Fr, you'll be able
+                                to make a purchase list order and get
+                                the best products that fix to you.
+
+                            </p></div>
+
+                <br>
+
+
+
+
+                        <div class="col-sm-9">
+                            <p>
+                        <strong>2. </strong> You can write to our professional team by the form
+                        <a href="<?= Url::to(['site/contact']); ?>">Contact Us</a> or to our email's team.
+
+                    </p>
+                <br>
+
                 <p>
-                    At Halseca Vision we are specialized suppliers in offering high quality security solutions to both
-                    the major and retail. Always striving to be at the forefront of the market by offering
-                    state-of-the-art products, we offer our customers the most sophisticated equipment of the latest
-                    generation, training and technical support, we also help them in the elaboration and configuration
-                    of their projects, without additional costs.
+                    <strong>3. </strong> You can search the <a href="<?= Url::to(['product/index']); ?>">Products</a> in
+                    our page,
+                    add the product to the purchase list and send to our tem, we will send you back a ready quote for
+                    you.
+
                 </p>
+                 <br>
+
+                            <div class="border-grey">
+                                <p><img src="/images/Call-Center.jpg" alt=" how are halseca" style="width: 25%"> <strong>We are here
+                                        to help you </strong>
+
+                            </p>
+                            </div>
+
+                        </div>
+
             </div>
 
 
 
 
-            <div class="row ">
-                <img src="/images/camera-blue.png" alt="camera halseca about" class="imagen-about-blue pull-right">
-            </div>
 
-            <div class="content form-control-block box-blue-about">
 
-                <p><strong> Mission </strong></p>
-                <p>
-                    Our mission is to provide our customers both wholesale and retail our products of video surveillance
-                    systems. Always offering the best quality, technology, training and technical support of the market,
-                    providing a quality service that meets your needs and expectations.
-                </p>
 
-                <p>  <strong>Vision</strong></p>
-
-                <p>
-                    Our vision is to reach the highest level of excellence and competitiveness of the market,
-                    maintaining the firm decision to surpass ourselves every day in the quality and variety of our
-                    products and services, ensuring the protection of the interests of our customers.
-                </p>
-            </div>
+            <div class="col-sm-1"></div>
 
         </div>
 
+
     </div>
+
+</div>
 </div>
