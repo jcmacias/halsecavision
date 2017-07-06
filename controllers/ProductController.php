@@ -145,6 +145,12 @@ class ProductController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionCart($code) {
+        \Yii::$app->response->format = \Yii\web\Response::FORMAT_JSON;
+        $product = \app\models\Product::find()->where(['code'=>$code])->one();;
+        return $product;
+    }
+
     /**
      * Finds the Product model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

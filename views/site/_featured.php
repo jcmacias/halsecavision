@@ -4,7 +4,7 @@ use yii\helpers\Url;
 ?>
 <div class="product-col simpleCart_shelfItem" data-match-height="featured" style="height: 183px;">
     <h5><a class="product-name name item_name"
-           href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><?= $model->name; ?></a></h5>
+           href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><?= $model->code; ?></a></h5>
     <div class="img">
         <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
                 src="/images/10.jpg" class="img-responsive"

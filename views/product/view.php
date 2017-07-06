@@ -62,8 +62,8 @@ use yii\widgets\Pjax;
 
 
                                     <div id="productMainImage" class="pull-left image-block">
-	<span class="image"><a href="/images/01.jpg">
-	<img src="images/01.jpg" class="img-responsive" alt="Oatey 316-in x 5-ft Rubber Utility Hose"
+	<span class="image"><a href="/uploads/<?= $model->image; ?>">
+	<img src="/uploads/<?= $model->image; ?>" class="img-responsive" alt="Oatey 316-in x 5-ft Rubber Utility Hose"
          title=" Oatey 316-in x 5-ft Rubber Utility Hose " width="200" height="200">	<span
                 class="zoom"></span></a></span>
 
@@ -79,19 +79,18 @@ use yii\widgets\Pjax;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pb-center-column col-xs-12 col-sm-6">
+                                <div class="pb-center-column col-xs-12 col-sm-6 simpleCart_shelfItem">
                                     <!--bof free ship icon  -->
                                     <!--eof free ship icon  -->
-                                    <h2 class="title_product"><?= $model->name; ?></h2>
-                                    <h3 class="sub_title"><?= $model->category_id; ?></h3>
+                                    <h2 class="title_product item_name"><?= $model->code; ?></h2>
+                                    <h3 class="sub_title"><?= $model->category->name; ?></h3>
                                     <!--bof Product description -->
                                     <div id="shortDescription" class="description"><?= $model->description; ?>
                                     </div>
                                     <!--eof Product description -->
                                     <!--bof Product details list  -->
                                     <ul class="instock">
-                                        <li><strong>Shipping Weight: </strong>2lbs</li>
-                                        <li><strong>Manufactured by: </strong>Gerber</li>
+<!--                                        <li><strong>Shipping Weight: </strong>2lbs</li>-->
                                         <?php if($model->fulldescription) { ?>
                                          <li><strong><a target="_blank" href="/pdf/<?= $model->fulldescription ?>">Full Description </a></strong>PDF</li>
                                         <?php } ?>
@@ -102,46 +101,18 @@ use yii\widgets\Pjax;
                                     </div>
                                     <div id="button_product">
                                         <div class="add_to_cart_row"><strong class="fleft text2"><input
-                                                    class="form-control" name="cart_quantity" value="1" maxlength="6"
+                                                    class="form-control item_Quantity" name="cart_quantity" value="1" maxlength="6"
                                                     size="8" type="text"><input name="products_id" value="1"
                                                                                 type="hidden"></strong><span
-                                                class="buttonRow"><input class="btn btn-success add-to-cart"
-                                                                         value="Add to Cart" type="submit"></span></div>
+                                                class="buttonRow"><input class="btn btn-success add-to-cart item_add"
+                                                                         value="Add to Cart" type="button"></span></div>
                                     </div>
                                     <!-- bof Social Media Icons -->
                                     <!-- eof Social Media Icons -->
                                 </div>
                             </div>
                             <!--bof Quantity Discounts table -->
-                            <div id="productQuantityDiscounts">
-                                <table cellspacing="2" cellpadding="2" border="1">
-                                    <tbody>
-                                    <tr>
-                                        <td colspan="6" class="title-tr" align="center">
-                                            Qty Discounts Off Price
-                                        </td>
-                                    </tr>
 
-                                    <tr>
-                                        <td align="center">1-4<br>$550.00</td>
-
-                                        <td align="center">5-9<br>$495.00</td>
-                                        <td align="center">10-14<br>$467.50</td>
-                                        <td align="center">15-19<br>$440.00</td>
-                                        <td align="center">20-24<br>$412.50</td>
-                                        <td align="center">25+<br>$385.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="7" align="center">&nbsp;  </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="6" align="center">
-                                            * Discounts may vary based on options above
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>                <!--eof Quantity Discounts table -->
 
                             <!--bof also related products module-->
 
@@ -172,18 +143,18 @@ use yii\widgets\Pjax;
 
                             <!--eof also related products module-->
                             <br>
-                            <div class="text2">
-                                <p class="reviewCount"><strong>Current Reviews: 0</strong></p>
-
-                                <!--bof Product date added/available-->
-                                <p id="productDateAdded" class="productGeneral centeredContent">This product was added
-                                    to our catalog on Thursday 09 September, 2010.</p>
-                                <!--eof Product date added/available -->
-
-                                <!--bof Product URL -->
-                                <!--eof Product URL -->
-
-                            </div>
+<!--                            <div class="text2">-->
+<!--                                <p class="reviewCount"><strong>Current Reviews: 0</strong></p>-->
+<!---->
+<!--                                <!--bof Product date added/available-->
+<!--                                <p id="productDateAdded" class="productGeneral centeredContent">This product was added-->
+<!--                                    to our catalog on Thursday 09 September, 2010.</p>-->
+<!--                                <!--eof Product date added/available -->
+<!---->
+<!--                                <!--bof Product URL -->
+<!--                                <!--eof Product URL -->
+<!---->
+<!--                            </div>-->
 
 
                             <!--bof also purchased products module-->
