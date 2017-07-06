@@ -21,7 +21,7 @@ $this->title = 'Products';
             <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
 
-        <?php Pjax::begin(); ?>    <?= ColumnListView::widget([
+            <?= ColumnListView::widget([
             'dataProvider' => $dataProvider,
             'columns' => 3, // default : 1
             'itemView' => '_item',
@@ -41,7 +41,7 @@ $this->title = 'Products';
         ])
 
         ?>
-        <?php Pjax::end(); ?>
+
     </div>
 </div>
 

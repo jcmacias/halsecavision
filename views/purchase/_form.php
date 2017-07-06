@@ -33,6 +33,9 @@ use yii\widgets\ActiveForm;
 
             <tr>
                 <td align="center">
+                    <div class="prod-img-label">Image</div>
+                </td>
+                <td align="center">
                     <div class="prod-name-label">Product Name</div>
                 </td>
                 <td align="center">
@@ -44,17 +47,10 @@ use yii\widgets\ActiveForm;
                 <td align="center">
                     <div class="prod-desc-label">Description</div>
                 </td>
-                <td align="center">
-                    <div class="prod-img-label">Image</div>
-                </td>
+
             </tr>
             <tr>
                 <td colspan="5" align="center">&nbsp;  </td>
-            </tr>
-            <tr>
-                <td colspan="5" align="center">
-                    * Discounts may vary based on options above
-                </td>
             </tr>
             </tbody>
         </table>
