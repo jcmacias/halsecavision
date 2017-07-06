@@ -27,9 +27,9 @@ $this->title = 'My Yii Application';
 
     <div class="slider-wrapper theme-default">
         <div id="slider" class="nivoSlider">
-            <a href="#"><img src="/images/slide1.jpg" class="img-responsive" alt="" width="2050" height="568" /></a>
-            <a href="#"><img src="/images/slide2.jpg" class="img-responsive" alt="" width="2050" height="568" /></a>
-            <a href="#"><img src="/images/slide3.jpg" class="img-responsive" alt="" width="2050" height="568" /></a>
+            <a href="#"><img src="/images/slide1.jpg" class="img-responsive"  /></a>
+            <a href="#"><img src="/images/slide2.jpg" class="img-responsive"/></a>
+            <a href="#"><img src="/images/slide3.jpg" class="img-responsive"/></a>
         </div>
     </div>                    <!-- end edit for ZX Slideshow -->
 </div>
@@ -63,7 +63,7 @@ $this->title = 'My Yii Application';
 
                                 <h2 class="centerBoxHeading">Featured Products</h2>
 
-                                <?php Pjax::begin(); ?>
+                                <?php //Pjax::begin(); ?>
                                 <?= ColumnListView::widget([
                                     'dataProvider' => $featured,
                                     'columns' => 3, // default : 1
@@ -80,7 +80,7 @@ $this->title = 'My Yii Application';
                                 ])
 
                                 ?>
-                                <?php Pjax::end(); ?>
+                                <?php //Pjax::end(); ?>
 
                             </div>
                             <!-- eof: featured products  -->
