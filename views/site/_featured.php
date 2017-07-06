@@ -7,7 +7,7 @@ use yii\helpers\Url;
            href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><?= $model->code; ?></a></h5>
     <div class="img">
         <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
-                src="/images/10.jpg" class="img-responsive"
+                src="uploads/<?= $model->image; ?>" class="img-responsive"
                 alt="Vigo One Handle Single Hole Pull Out Spray Kitchen Faucet"
                 title=" Vigo One Handle Single Hole Pull Out Spray Kitchen Faucet " width="200" height="200"></a>
 
