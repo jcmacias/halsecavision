@@ -117,6 +117,22 @@ class Product extends \yii\db\ActiveRecord
         return $image;
     }
 
+//    public function uploadUpdateFile() {
+//        // get the uploaded file instance
+//        $image = UploadedFile::getInstance($this, 'upload_file');
+//
+//        // if no image was uploaded abort the upload
+//        if (empty($image)) {
+//            return $this->image;
+//        }
+//
+//        // generate random name for the file
+//        $this->image = time(). '.' . $image->extension;
+//
+//        // the uploaded image instance
+//        return $image;
+//    }
+
     public function getUploadedFile() {
         // return a default image placeholder if your source avatar is not found
         $pic = isset($this->image) ? $this->image : 'default.png';
@@ -134,6 +150,19 @@ class Product extends \yii\db\ActiveRecord
 
         return $pdf;
     }
+
+//    public function uploadUpdatePDF() {
+//        $pdf = UploadedFile::getInstance($this, 'upload_pdf');
+//
+//        if (empty($pdf)) {
+//
+//            return $this->fulldescription;
+//        }
+//
+//        $this->fulldescription = time().'.'.$pdf->extension;
+//
+//        return $pdf;
+//    }
 
     public function getUploadPDF () {
         $file = isset($this->fulldescription) ? $this->fulldescription : 'none';

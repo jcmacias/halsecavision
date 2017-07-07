@@ -20,7 +20,7 @@ use yii\helpers\Url;
                                    href="javascript:;"><span
                         class="cssButton normal_button button  button_add_to_cart"
                         onmouseover="this.className='cssButtonHover normal_button button  button_add_to_cart button_add_to_cartHover'"
-                        onmouseout="this.className='cssButton normal_button button  button_add_to_cart'">&nbsp;Add to Cart&nbsp;</span></a>
+                        onmouseout="this.className='cssButton normal_button button  button_add_to_cart'">&nbsp;Add to List&nbsp;</span></a>
             </div>
             <div class="button1"><a class="btn products-button"
                                     href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><span
