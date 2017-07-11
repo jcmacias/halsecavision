@@ -21,6 +21,7 @@ use Yii;
  */
 class Purchase extends \yii\db\ActiveRecord
 {
+    public $product_code;
     /**
      * @inheritdoc
      */
@@ -35,7 +36,7 @@ class Purchase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'customer_name', 'phone'], 'required'],
+            [['customer_name', 'phone'], 'required'],
             [['id', 'qty', 'phone'], 'integer'],
             [['customer_name', 'address', 'company', 'email', 'purchasecol'], 'string', 'max' => 45],
         ];

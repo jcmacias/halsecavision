@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Product;
 use Yii;
 use app\models\Purchase;
 use app\models\PurchaseSearch;
@@ -64,8 +65,15 @@ class PurchaseController extends Controller
     public function actionCreate()
     {
         $model = new Purchase();
+        $product = new Product();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $post=Yii::$app->request->post();
+            $form =$post['Purchase']['product_code'];
+            $json = json_decode($form);
+            for ($i=0;$i<count($json);$i++) {
+                $product=$product = \app\models\Product::find()->where(['code'=>$json[$i]->code])->one();
+                $model->link('products',$product);            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

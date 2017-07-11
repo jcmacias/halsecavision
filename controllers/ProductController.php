@@ -159,7 +159,7 @@ class ProductController extends Controller
 
     public function actionCart($code) {
         \Yii::$app->response->format = \Yii\web\Response::FORMAT_JSON;
-        $product = \app\models\Product::find()->where(['code'=>$code])->one();;
+        $product = \app\models\Product::find()->where(['code'=>$code])->one();
         return $product;
     }
 
