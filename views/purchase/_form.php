@@ -20,6 +20,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'phone')->textInput() ?>
 
+    <?= $form->field($model, 'product_code')->hiddenInput()->label(false); ?>
+
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <div id="productQuantityDiscounts">
@@ -59,7 +61,7 @@ use yii\widgets\ActiveForm;
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success simpleCart_empty' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

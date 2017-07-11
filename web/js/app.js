@@ -17,14 +17,12 @@ $(document).ready(function () {
     var cartStr= localStorage.simpleCart_items;
 
     cartJson =  JSON.parse(cartStr);
-    console.log(cartJson);
    var items=[];
     for (x in cartJson) {
         $.get('index.php?r=product/cart',{code : cartJson[x].name}, function(data)
         {
-            console.log(data);
+
             items.push(data);
-            console.log(cartJson[x].name);
 
             $('#p-list').append('<tr><td><div class="prod-img"><img style="width: 20%" src="uploads/'+data.image+'" alt=""></div></td><td><div class="prod-name">'+ data.name+
                 '</div></td><td><div class="prod-code">'+data.code+
@@ -34,7 +32,14 @@ $(document).ready(function () {
 
 
     }
-    console.log(items);
+
+
+    console.log(pur);
+    $('#p-send').on('click', function (e) {
+        e.preventDefault();
+        var pur = JSON.stringify(items);
+        $('#purchase-product_code').val(pur);
+    });
 
 });
 
