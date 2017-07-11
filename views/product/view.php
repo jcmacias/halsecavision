@@ -105,7 +105,7 @@ use yii\widgets\Pjax;
                                                     size="8" type="text"><input name="products_id" value="1"
                                                                                 type="hidden"></strong><span
                                                 class="buttonRow"><input class="btn btn-success add-to-cart item_add"
-                                                                         value="Add to Cart" type="button"></span></div>
+                                                                         value="Add to List" type="button"></span></div>
                                     </div>
                                     <!-- bof Social Media Icons -->
                                     <!-- eof Social Media Icons -->

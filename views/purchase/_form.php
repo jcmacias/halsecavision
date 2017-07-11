@@ -12,15 +12,26 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'customer_name')->textInput(['maxlength' => true]) ?>
+    <div class="row">
 
-    <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'company')->textInput(['maxlength' => true]) ?>
+        <div class="col-sm-6">
 
-    <?= $form->field($model, 'phone')->textInput() ?>
+            <?= $form->field($model, 'customer_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'phone')->textInput() ?></div>
+
+        <div class="col-sm-6">
+
+            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'company')->textInput(['maxlength' => true]) ?>
+        </div></div>
+    
+    <div class="row">
+          <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+
+    </div>
+
 
     <div id="productQuantityDiscounts">
         <table id="p-list" cellspacing="2" cellpadding="2" border="1">
@@ -55,13 +66,13 @@ use yii\widgets\ActiveForm;
             </tbody>
         </table>
 
-        </div>
     </div>
+</div>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
+<div class="form-group">
+    <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+</div>
 
-    <?php ActiveForm::end(); ?>
+<?php ActiveForm::end(); ?>
 
 </div>
