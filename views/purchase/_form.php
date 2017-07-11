@@ -19,21 +19,19 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'customer_name')->textInput(['maxlength' => true]) ?>
 
-            <?= $form->field($model, 'phone')->textInput() ?></div>
+            <?= $form->field($model, 'phone')->textInput() ?>
+            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?></div>
+
 
         <div class="col-sm-6">
 
-            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
             <?= $form->field($model, 'company')->textInput(['maxlength' => true]) ?>
         </div></div>
-    
-    <div class="row">
-          <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
-
-    </div>
 
 
-    <div id="productQuantityDiscounts">
+    <div>
+        <div id="productQuantityDiscounts" class="table-responsive" style="margin-top:25px ">
         <table id="p-list" cellspacing="2" cellpadding="2" border="1">
             <tbody>
             <tr>
@@ -68,9 +66,9 @@ use yii\widgets\ActiveForm;
 
     </div>
 </div>
-
-<div class="form-group">
-    <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+</div>
+<div class="form-group pull-right">
+    <?= Html::submitButton($model->isNewRecord ? 'Send <i class="fa fa-send-o"></i> ' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>
