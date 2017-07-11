@@ -19,14 +19,11 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'customer_name')->textInput(['maxlength' => true]) ?>
 
-<<<<<<< HEAD
+
             <?= $form->field($model, 'phone')->textInput() ?>
             <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?></div>
-=======
-    <?= $form->field($model, 'product_code')->hiddenInput()->label(false); ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
->>>>>>> 6c4f862593d2e8a764fa969f955f98aa40b53bb4
+
 
 
         <div class="col-sm-6">
@@ -70,19 +67,14 @@ use yii\widgets\ActiveForm;
             </tbody>
         </table>
 
-<<<<<<< HEAD
-=======
+
         </div>
     </div>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success simpleCart_empty' : 'btn btn-primary']) ?>
->>>>>>> 6c4f862593d2e8a764fa969f955f98aa40b53bb4
-    </div>
-</div>
-</div>
+
+
 <div class="form-group pull-right">
-    <?= Html::submitButton($model->isNewRecord ? 'Send <i class="fa fa-send-o"></i> ' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <?= Html::submitButton($model->isNewRecord ? 'Send <i class="fa fa-send-o"></i> ' : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success simpleCart_empty': 'btn btn-primary']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>
