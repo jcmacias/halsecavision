@@ -289,11 +289,15 @@ $bodyHomeIndex = 1;
                         </div>
                         <ul class="header_user_info customer_links">
                             <!-- ========== NAVIGATION LINKS ========== -->
-
-                            <li><a style="font-size: 37px" href="http://www.facebook.com"><i
+                            <li><a style="font-size: 37px" href="http://www.instagram.com/halsecavision"><i
+                                        class="fa fa-instagram fa-2" aria-hidden="true"></i></a></li>
+                            
+                            <li><a style="font-size: 37px" href="http://www.facebook.com/HalsecaVision"><i
                                         class="fa fa-facebook-square fa-2" aria-hidden="true"></i></a></li>
-                            <li><a style="font-size: 37px" href="http://www.twitter.com"><i
+                            <li><a style="font-size: 37px" href="http://www.twitter.com/halsecavision"><i
                                         class="fa fa-twitter-square fa-2" aria-hidden="true"></i></a></li>
+
+
 
                             <!-- ====================================== -->
                         </ul>
@@ -432,17 +436,17 @@ $bodyHomeIndex = 1;
                                         </div>
                                         <span class="plus"></span></li>
                                     </li>
-                                    <li class="quicklinks-li"><a class="drop"
-                                                                 
-                                                                 href="<?= Url::to(['purchase/index']); ?>">Purchase List</a>
-                                    </li>
+<!--                                    <li class="quicklinks-li"><a class="drop"-->
+<!--                                                                 -->
+<!--                                                                 href="--><?//= Url::to(['purchase/index']); ?><!--">Purchase List</a>-->
+<!--                                    </li>-->
                                 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>">How Works</a></li>
 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>">Contact</a>
                                     </li>
 
-                                    <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['category/index']);?>">Categories</a></li>
+<!--                                    <li class="quicklinks-li"><a  class="drop" href="--><?//= Url::to(['category/index']);?><!--">Categories</a></li>-->
 
                                 </ul><!-- eof mega-menu -->
 
