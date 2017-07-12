@@ -312,7 +312,7 @@ $bodyHomeIndex = 1;
                 <div class="row clearfix">
                     <div id="header_logo" class="col-xs-12 col-sm-3">
                         <!-- ========== LOGO ========== -->
-                        <a  href="/"><img class="img-responsive" src="/images/logo.png" alt="" style="padding-top: 10px;"/></a>
+                        <a  href="/"><img class="logo" src="/images/logo.png" alt="" style="padding-top: 10px;"/></a>
                         <!-- ========================== -->
                     </div>
                     <div class="col-xs-12 col-sm-9 col-md-9">
@@ -379,6 +379,8 @@ $bodyHomeIndex = 1;
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>">Home</a>
                                     </li>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>">About</a>
+                                    </li>
                                     <li class="quicklinks-li "><a class="drop"
                                                                   href="<?= Url::to(['product/index']); ?>">Product</a>
 
@@ -436,8 +438,7 @@ $bodyHomeIndex = 1;
                                     </li>
                                 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>">How Works</a></li>
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>">About</a>
-                                    </li>
+
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>">Contact</a>
                                     </li>
 

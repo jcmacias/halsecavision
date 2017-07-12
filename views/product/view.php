@@ -11,6 +11,8 @@ use yii\widgets\Pjax;
 //$this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
 <div class="container">
     <div class="product-view">
 
@@ -100,11 +102,12 @@ use yii\widgets\Pjax;
 
                                     </div>
                                     <div id="button_product">
-                                        <div class="add_to_cart_row"><strong class="fleft text2"><input
+                                        <div class="add_to_cart_row">
+                                            <strong class="fleft text2"><input
                                                     class="form-control item_Quantity" name="cart_quantity" value="1" maxlength="6"
                                                     size="8" type="text"><input name="products_id" value="1"
                                                                                 type="hidden"></strong><span
-                                                class="buttonRow"><input class="btn btn-success add-to-cart item_add"
+                                                class="buttonRow"><input  class=" add-to-list btn btn-success add-to-cart item_add"
                                                                          value="Add to List" type="button"></span></div>
                                     </div>
                                     <!-- bof Social Media Icons -->

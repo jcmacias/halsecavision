@@ -10,11 +10,12 @@ use yii\helpers\HtmlPurifier;
 use yii\helpers\Url;
 
 ?>
+
 <div class="product-col simpleCart_shelfItem">
     <div class="img">
-        <a href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
-                src="/uploads/<?= $model->image ?>" class="img-responsive" alt="Oatey 316-in x 5-ft Rubber Utility Hose"
-                title=" Oatey 316-in x 5-ft Rubber Utility Hose " width="200" height="200"></a></div>
+        <a  href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
+                src="/uploads/<?= $model->image ?>" class="img-responsive img-item" alt="Halseca Products"
+                title=" " width="200" height="200"></a></div>
     <div class="prod-info"><h5 itemprop="name">
             <?= Html::a(Html::encode($model->code), ['view', 'id' => $model->id, 'category_id' => $model->category_id],['class' => 'product-name name item_name']);?>
         </h5>
@@ -27,7 +28,7 @@ use yii\helpers\Url;
 
                 <div class="clearfix"></div>
                 <input type="hidden" value="1" class="item_Quantity">
-                <div class="button"><a class="btn add-to-cart item_add"
+                <div class="button"><a class="btn add-to-cart add-to-list item_add"
                                        href="javascript:;"><span
                             class="cssButton normal_button button  button_add_to_cart"
                             onmouseover="this.className='cssButtonHover normal_button button  button_add_to_cart button_add_to_cartHover'"

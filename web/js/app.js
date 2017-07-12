@@ -41,6 +41,9 @@ $(document).ready(function () {
         $('#purchase-product_code').val(pur);
     });
 
+
+
+
 });
 
 
