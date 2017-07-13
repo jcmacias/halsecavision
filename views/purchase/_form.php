@@ -30,6 +30,7 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
             <?= $form->field($model, 'company')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'product_code')->hiddenInput()->label(false); ?>
         </div></div>
 
 
