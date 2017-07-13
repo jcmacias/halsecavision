@@ -36,9 +36,10 @@ class Purchase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['customer_name', 'phone'], 'required'],
-            [['id', 'qty', 'phone'], 'integer'],
-            [['customer_name', 'address', 'company', 'email', 'purchasecol'], 'string', 'max' => 45],
+            [['customer_name', 'phone','email'], 'required'],
+            [['id', 'qty'], 'integer'],
+            [['customer_name', 'address', 'company', 'phone'], 'string', 'max' => 45],
+            ['email', 'email'],
         ];
     }
 
