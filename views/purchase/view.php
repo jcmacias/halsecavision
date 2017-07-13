@@ -7,36 +7,21 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Purchase */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Purchases', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="purchase-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h2 class="centerBoxHeading h2BoxHeadingab"><?= Html::encode($this->title) ?></h2>
 
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
+        <div class="border-grey col-sm-10">
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'qty',
-            'customer_name',
-            'address',
-            'company',
-            'phone',
-            'email:email',
-            'purchasecol',
-        ],
-    ]) ?>
 
-</div>
+
+
+        <p style="color: #00aa00"><strong>You form has been sent!</strong></p>
+
+            <p><strong>You will contact for our team soon</strong></p>
+            <p style="color: #1c94c4"><strong>Thank you for chose Halseca Vision </strong></p>
+
+        </div>
+    </div>

@@ -52,7 +52,6 @@ $(document).ready(function () {
             || $('#purchase-email').val() != '') {
                 return true;
             }else {
-                alert('go');
                 simpleCart.empty();
             }
 
