@@ -291,7 +291,7 @@ $bodyHomeIndex = 1;
                             <!-- ========== NAVIGATION LINKS ========== -->
                             <li><a style="font-size: 37px" href="http://www.instagram.com/halsecavision"><i
                                         class="fa fa-instagram fa-2" aria-hidden="true"></i></a></li>
-                            
+
                             <li><a style="font-size: 37px" href="http://www.facebook.com/HalsecaVision"><i
                                         class="fa fa-facebook-square fa-2" aria-hidden="true"></i></a></li>
                             <li><a style="font-size: 37px" href="http://www.twitter.com/halsecavision"><i
@@ -313,6 +313,13 @@ $bodyHomeIndex = 1;
         </div>
         <div class="bottom">
             <div class="container">
+                <!-- ========== leguage ========== -->
+                <div class="row"><?= Html::beginForm() ?>
+                    <?= Html::dropDownList('language', Yii::$app->language, ['en-US' => 'English', 'es_ES' => 'Español']) ?>
+                    <?= Html::submitButton('Change') ?>
+                    <?= Html::endForm() ?>
+                </div>
+
                 <div class="row clearfix">
                     <div id="header_logo" class="col-xs-12 col-sm-3">
                         <!-- ========== LOGO ========== -->
@@ -354,6 +361,8 @@ $bodyHomeIndex = 1;
                             </div>
                         </div>
                         <!-- =================================== -->
+
+
                         <div id="search_block" class="clearfix">
                             <!-- ========== SEARCH ========== -->
                             <form name="quick_find_header" action="#" method="get"
