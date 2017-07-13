@@ -48,17 +48,23 @@ $(document).ready(function () {
             alert("Yor List is empty please contact whit us by link Contact");
         }
         else {
-            if ($('.purchase-form').find('.has-error').length || $('#purchase-phone').val() != '' || $('#purchase-customer_name').val() != ''
-            || $('#purchase-email').val() != '') {
+            if ($('#purchase-phone').val() == '' || $('#purchase-customer_name').val() == ''
+            || $('#purchase-email').val() == '' || validateEmail($('#purchase-email').val())==false) {
                 return true;
             }else {
-                alert('go');
                 simpleCart.empty();
             }
 
         }
     });
 
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(re.test(email)){
+            return true;
+        }
+        return false;
+    }
 
 
 
