@@ -34,11 +34,29 @@ $(document).ready(function () {
     }
 
 
-    console.log(pur);
-    $('#p-send').on('click', function (e) {
+    // console.log(pur);
+    $('#w0').on('submit', function (e) {
         e.preventDefault();
-        var pur = JSON.stringify(items);
-        $('#purchase-product_code').val(pur);
+        if(items!=''){
+            var pur = JSON.stringify(items);
+            $('#purchase-product_code').val(pur);
+        }
+        this.submit();
+
+        if(simpleCart.items().length == 0)
+        {
+            alert("Yor List is empty please contact whit us by link Contact");
+        }
+        else {
+            if ($('.purchase-form').find('.has-error').length || $('#purchase-phone').val() != '' || $('#purchase-customer_name').val() != ''
+            || $('#purchase-email').val() != '') {
+                return true;
+            }else {
+                alert('go');
+                simpleCart.empty();
+            }
+
+        }
     });
 
 

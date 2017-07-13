@@ -74,8 +74,8 @@ use yii\widgets\ActiveForm;
 
 
 
-<div class="form-group pull-right">
-    <?= Html::submitButton($model->isNewRecord ? 'Send <i class="fa fa-send-o"></i> ' : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success simpleCart_empty': 'btn btn-primary']) ?>
+<div class="form-group pull-right ">
+    <?= Html::submitButton($model->isNewRecord ? 'Send <i class="fa fa-send-o"></i> ' : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success ': 'btn btn-primary ']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>

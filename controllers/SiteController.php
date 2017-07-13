@@ -133,4 +133,18 @@ class SiteController extends Controller
     {
         return $this->render('how');
     }
+
+    public function actionLanguage()
+    {
+        $language = Yii::$app->request->post('language');
+        Yii::$app->language = $language;
+
+        $languageCookie = new Cookie([
+            'name' => 'language',
+            'value' => $language,
+            'expire' => time() + 60 * 60 * 24 * 30, // 30 days
+        ]);
+
+    }
+
 }
