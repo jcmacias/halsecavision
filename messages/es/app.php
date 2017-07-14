@@ -55,8 +55,18 @@ return [
     'Related Products' => 'Productos Similaers',
     'Add to List' => 'Añadir a la Lista',
     'Details' => 'Detalles',
-    'Quick Links' => 'Atajos',
-    'Quick Links' => 'Atajos',
+    'Customer Name' => 'Nombre del Cliente',
+    'Address' => 'Direccion',
+    'Company' => 'Compañia',
+    'Phone' => 'Telefono',
+    'Email' => 'Correo',
+    'Product Name' => 'Nombre del Producto',
+    'Code' => 'Codigo',
+    'Description' => 'Descripcion',
+    'Image' => 'Imagen',
+    'Purchase List' => 'Lista de Productos',
+    'Create Purchase' => 'Crear Presupuesto',
+    'Image' => 'Imagen',
 
 
 ];

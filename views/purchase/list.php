@@ -19,7 +19,7 @@ $this->title = 'Purchases List';
 
 <div>
     <div id="productQuantityDiscounts" class="table-responsive" style="margin-top:25px ">
-        <table id="p-list" cellspacing="2" cellpadding="2" border="1">
+        <table id="1p-list" cellspacing="2" cellpadding="2" border="1">
             <tbody>
             <tr>
                 <td colspan="5" class="title-tr" align="center">

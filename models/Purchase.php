@@ -51,11 +51,11 @@ class Purchase extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'qty' => 'Qty',
-            'customer_name' => 'Customer Name',
-            'address' => 'Address',
-            'company' => 'Company',
-            'phone' => 'Phone',
-            'email' => 'Email',
+            'customer_name' => Yii::t('app','Customer Name'),
+            'address' => Yii::t('app','Address'),
+            'company' => Yii::t('app','Company'),
+            'phone' => Yii::t('app','Phone'),
+            'email' => Yii::t('app','Email'),
             'purchasecol' => 'Purchasecol',
         ];
     }
