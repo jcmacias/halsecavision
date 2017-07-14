@@ -17,6 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Note:' => '',
-
+    'Home' => 'Inicio',
+    'About' => 'Nosotros',
+    'Product' => 'Productos',
+    'PTZ Camera' => 'Camaras PTZ',
+    'Cameras' => 'Camaras',
+    'Controls' => 'Controles',
+    'How Works' => 'Como Funciona',
+    'Contact' => 'Contacto',
 ];

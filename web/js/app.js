@@ -25,9 +25,7 @@ $(document).ready(function () {
             items.push(data);
 
             $('#p-list').append('<tr><td><div class="prod-img"><img style="width: 20%" src="uploads/'+data.image+'" alt=""></div></td><td><div class="prod-name">'+ data.name+
-                '</div></td><td><div class="prod-code">'+data.code+
-                '</div></td><td><div class="prod-qty">'+cartJson[x].quantity+'</div></td><td><div class="prod-desc">'+data.description+
-                '</div></td></tr>');
+                '</div></td><td><div class="prod-code">'+data.code+'</div></td><td><div class="prod-qty">'+cartJson[x].quantity+'</div></td><td><div class="prod-desc">'+data.description+'</div></td></tr>');
         });
 
 
