@@ -37,9 +37,9 @@ $this->title = 'My Yii Application';
     <div class="container">
         <div class="banners1">
             <div class="row">
-                <div class="col-sm-4 col-xs-4 item item_1"><a href="<?= Url::to(['category/view', 'id' => 4]); ?>"><img src="images/item1.png" class="img-responsive"  alt="Camera AHD/CVI/TVI/SDI." title=" Camera " width="370" height="217" /><div class="title"><div class="capt bounce-to-bottom"><h3><b>Camera</b> HD/IP/WIFI </h3><p>Your eyes when you are not there, choose modern technology with us. </p></div></div></a>
-                </div><div class="col-sm-4 col-xs-4 item item_2"><a href="<?= Url::to(['category/view', 'id' => 3]); ?>"><img src="images/item2.png" class="img-responsive" alt="WIFI/IP/PLC Quick to install / Maximum quality.." title="Security camera kits" width="370" height="217" /><div class="title"><div class="capt bounce-to-bottom"><h3><b>Kits </b>WIFI/IP/PLC</h3><p>Quick to install / Maximum quality / Competitive prices.</p></div></div></a>
-                </div><div class="col-sm-4 col-xs-4 item item_3"><a href="<?= Url::to(['category/view', 'id' => 1]); ?>"><img src="images/item3.png" class="img-responsive" alt="PTZ Camera, Make possible to monitor large areas with a single security camera." title="Categotia1" width="370" height="217" /><div class="title"><div class="capt bounce-to-bottom"><h3><b>PTZ</b> Camera</h3><p>Make possible to monitor large areas with a single security camera.</p></div></div></a>
+                <div class="col-sm-4 col-xs-4 item item_1"><a href="<?= Url::to(['category/view', 'id' => 4]); ?>"><img src="/images/item1.png" class="img-responsive"  alt="Camera AHD/CVI/TVI/SDI." title=" Camera " width="370" height="217" /><div class="title"><div class="capt bounce-to-bottom"><h3><b><?= Yii::t('app','Camera');?></b> HD/IP/WIFI </h3><p><?= Yii::t('app','Your eyes when you are not there, choose modern technology with us.');?> </p></div></div></a>
+                </div><div class="col-sm-4 col-xs-4 item item_2"><a href="<?= Url::to(['category/view', 'id' => 3]); ?>"><img src="/images/item2.png" class="img-responsive" alt="WIFI/IP/PLC Quick to install / Maximum quality.." title="Security camera kits" width="370" height="217" /><div class="title"><div class="capt bounce-to-bottom"><h3><b>Kits </b>WIFI/IP/PLC</h3><p><?= Yii::t('app','Quick to install / Maximum quality / Competitive prices.');?></p></div></div></a>
+                </div><div class="col-sm-4 col-xs-4 item item_3"><a href="<?= Url::to(['category/view', 'id' => 1]); ?>"><img src="/images/item3.png" class="img-responsive" alt="PTZ Camera, Make possible to monitor large areas with a single security camera." title="Categotia1" width="370" height="217" /><div class="title"><div class="capt bounce-to-bottom"><h3><b>PTZ</b><?= Yii::t('app','Camera');?></h3><p><?= Yii::t('app','Make possible to monitor large areas with a single security camera.');?></p></div></div></a>
                 </div>          </div>
         </div>
     </div>
@@ -61,7 +61,7 @@ $this->title = 'My Yii Application';
                             <!-- bof: featured products  -->
                             <div class="centerBoxWrapper clearfix" id="featuredProducts">
 
-                                <h2 class="centerBoxHeading">Featured Products</h2>
+                                <h2 class="centerBoxHeading"><?= Yii::t('app','Featured Products');?></h2>
 
                                 <?php //Pjax::begin(); ?>
                                 <?= ColumnListView::widget([
@@ -92,7 +92,7 @@ $this->title = 'My Yii Application';
 <!--                <h2 class="centerBoxHeading h2BoxHeading col-sm-8">Record with us</h2>-->
 
                 <div class="col-sm-6">
-                        <h2 class="centerBoxHeading h2BoxHeading col-sm-12">Record with us</h2>
+                        <h2 class="centerBoxHeading h2BoxHeading col-sm-12"><?= Yii::t('app','Record with us Products');?></h2>
                         <div class="row col-sm-12" >
                             <video controls class="col-sm-6">
                                 <source src="../uploads/File_000.mp4" type="video/mp4; codecs= avc1.42E01E, mp4a.40.2">
@@ -121,7 +121,7 @@ $this->title = 'My Yii Application';
                 </div>
 
                 <div class="col-sm-6">
-                    <h2 class="centerBoxHeading h2BoxHeading col-sm-12">Where we are?</h2>
+                    <h2 class="centerBoxHeading h2BoxHeading col-sm-12"><?= Yii::t('app','Where we are?');?></h2>
 
                             <div> <img src="/images/WeAreIn.png" alt="Halseca Vision are In" class="col-sm-10"></div>
 

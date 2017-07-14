@@ -20,7 +20,7 @@ use yii\captcha\Captcha;
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">
-            Thank you for contacting us. We will respond to you as soon as possible.
+            <?= Yii::t('app','Thank you for contacting us. We will respond to you as soon as possible.');?>
         </div>
 
         <p>
@@ -41,15 +41,14 @@ use yii\captcha\Captcha;
 
     <div class="container">
 
-        <h2 class="centerBoxHeading h2BoxHeading">Contact Us</h2>
+        <h2 class="centerBoxHeading h2BoxHeading"><?= Yii::t('app','Contact Us');?></h2>
 
         <div class="form-control-block">
 
             <input name="securityToken" value="1b0ff7e4cc5cd8f42fa109a146e90e52" type="hidden">
             <div id="contactUsNoticeContent" class="content">
-                <strong>Contact Us </strong>
-                <p>If you have business inquiries or other questions, please fill out the following form to contact us.
-                    Thank you.</p>
+                <strong><?= Yii::t('app','Contact Us');?> </strong>
+                <p><?= Yii::t('app','If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.');?></p>
             </div>
 
             <div class="contact_fields_wrapper clearfix">
@@ -59,23 +58,32 @@ use yii\captcha\Captcha;
                         <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
                         <div class="form-group contact-group">
 
-                            <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label("Full Name:") ?>
+                            <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
                             <!--                        <input name="contactname" size="40" id="contactname" class="form-control" type="text">-->
                         </div>
 
                         <div class="form-group contact-group">
 
-                            <?= $form->field($model, 'email')->label("Email Address:") ?>
+                            <?= $form->field($model, 'email')?>
                         </div>
 
                         <div class="form-group contact-group">
-                            <?= $form->field($model, 'body')->textarea(['rows' => 6])->label("Message:") ?>
+                            <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
                         </div>
 
+                        <?php  if (Yii::$app->language=='en') {?>
                         <div class="form-group contact-group">
                             <?= Html::submitButton('Send Now', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
 
                         </div>
+                        <?php } ?>
+
+                        <?php  if (Yii::$app->language=='es') {?>
+                            <div class="form-group contact-group">
+                                <?= Html::submitButton('Enviar Ahora', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+
+                            </div>
+                        <?php } ?>
 
                     </div>
 
@@ -99,27 +107,27 @@ use yii\captcha\Captcha;
 
             <div class="content border-grey ">
                 <div class="row content " id="ourTeamContent">
-                    <strong>Our Team </strong>
+                    <strong><?= Yii::t('app','Our Team');?> </strong>
                 </div>
                 <div class="row">
 
                     <div class="col-sm-3">
 
-                        <span>Management Department.</span>
+                        <span><?= Yii::t('app','Management Department.');?> </span>
                         <span><a href="mailto:manager@halsecavision.net">manager@halsecavision.net</a></span>
 
                     </div>
 
                     <div class="col-sm-3">
 
-                        <span>Sales Representative.</span>
+                        <span><?= Yii::t('app','Sales Representative.');?></span>
                         <span><a href="mailto:sale@halsecavision.net">sale@halsecavision.net</a></span>
 
                     </div>
 
                     <div class="col-sm-3">
 
-                        <span>Technical Support.</span>
+                        <span><?= Yii::t('app','Technical Support.');?></span>
                         <span><a href="mailto:techsupport@halsecavision.net">techsupport@halsecavision.net</a></span>
 
                     </div>

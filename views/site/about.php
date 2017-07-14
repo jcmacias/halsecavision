@@ -10,7 +10,7 @@ use yii\helpers\Html;
 
     <div class="container">
 
-        <h2 class="centerBoxHeading h2BoxHeadingab">About Us</h2>
+        <h2 class="centerBoxHeading h2BoxHeadingab"><?= Yii::t('app','About Us');?></h2>
 
         <div class="content form-control-block">
             <?php  if (Yii::$app->language=='en') {?>
@@ -56,7 +56,47 @@ use yii\helpers\Html;
             </div>
             <?php } ?>
             <?php  if (Yii::$app->language=='es') {?>
-                <p> falta traduccion</p>
+                <div class="border-grey">
+                    <p>
+
+
+                    <p><strong>¿Quienes somos?</strong></p>
+
+                    <strong>Halseca Vision</strong> es una marca de <strong>Halseca International Group L.L.C.</strong>,
+                    dedicada al área de fabricación, importación, distribución y exportación de equipos de video,
+                    cámaras (CCTV), y grabadores de seguridad, tanto analógicos, digitales y tecnologias hibridas.
+                    </p>
+
+                    <p>
+                        En Halseca Vision somos proveedores especializados en ofrecer soluciones
+                        de seguridad de alta calidad tanto al mayor como al detal. Aspirando siempre a estar en la vanguardia
+                        del mercado ofreciendo productos de ultima tecnología, Ofrecemos a nuestros clientes los equipos más
+                        soﬁsticados de última generación, entrenamiento y soporte técnico,también los ayudamos en la elaboración
+                        y conﬁguración de sus proyectos, sin costos adicionales.
+                    </p>
+                </div>
+
+                <br>
+                <br>
+                <div class="content form-control-block ">
+
+                    <p><strong> Misión </strong></p>
+                    <p>
+                        Nuestra misión es brindar a nuestros clientes tanto mayoristas como al detal nuestros productos
+                        de sistemas de video vigilancia. Ofreciendo siempre la mejor calidad, tecnología, entrenaamiento
+                        y soporte técnico del mercado,  proporcionando un servicio de calidad que satisfaga sus necesidades
+                        y expectativas.
+
+                    </p>
+
+                    <p>  <strong>Visión</strong></p>
+
+                    <p>
+                        Nuestra visión es llegar al máximo nivel de excelencia y competividad del mercado, manteniendo la ﬁrme
+                        decisión de superarnos día a día en la calidad y variedad de nuestros productos y servicios, asegurándonos
+                        de la protección y el resguardo de los intereses de nuestros clientes más allá de cualquier relación contractual.
+                    </p>
+                </div>
             <?php }?>
         </div>
 

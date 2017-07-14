@@ -305,7 +305,7 @@ $bodyHomeIndex = 1;
                     <div class="col-xs-12 col-md-5 col-lg-5">
                         <div class="phone">
                             <p>(954) 951-6477</p>
-                            <span>Hours: 8am-5pm  M-Fr</span>
+                            <span><?= Yii::t('app','Hours: 8am-5pm  M-Fr');?></span>
                         </div>
                     </div>
                 </div>
@@ -328,16 +328,16 @@ $bodyHomeIndex = 1;
                     </div>
                     <div class="col-xs-12 col-sm-9 col-md-9">
                         <div class="header_cust_block clearfix">
-                            <p>Free Quote</p>
+                            <p><?= Yii::t('app','Free Quote');?></p>
                             <div>
-                                <span><a href="mailto:info@halsecavision.com">Contact us today.</a></span>
-                                <span>We'll help you to find the best price.</span>
+                                <span><a href="mailto:info@halsecavision.com"><?= Yii::t('app','Contact us today.');?></a></span>
+                                <span><?= Yii::t('app','We\'ll help you to find the best price.');?></span>
                             </div>
                         </div>
                         <div class="shopping_cart" id="shopping_cart">
                             <!-- ========== SHOPPING CART ========== -->
                             <div class="shop-box-wrap">
-                                <span class="cart_title">Purchace List</span><span class="st3 simpleCart_quantity"> (empty) </span>
+                                <span class="cart_title"><?= Yii::t('app','Purchace List');?></span><span class="st3 simpleCart_quantity"> <?= Yii::t('app','(empty)');?> </span>
                             </div>
                             <div class="shopping_cart_content" id="shopping_cart_content">
                                 <ul class="cart-down">
@@ -354,7 +354,7 @@ $bodyHomeIndex = 1;
                                                href="<?= Url::to(['purchase/create']); ?>"><span
                                                     class="cssButton normal_button button  button_checkout simpleCart_checkout"
                                                     onmouseover="this.className='cssButtonHover normal_button button  button_checkout button_checkoutHover'"
-                                                    onmouseout="this.className='cssButton normal_button button  button_checkout'">&nbsp;Send <i class="fa fa-send"></i>&nbsp;</span></a>
+                                                    onmouseout="this.className='cssButton normal_button button  button_checkout'">&nbsp; <?= Yii::t('app','Send');?> <i class="fa fa-send"></i>&nbsp;</span></a>
                                         </div>
                                     </li>
                                 </ul>
@@ -390,9 +390,9 @@ $bodyHomeIndex = 1;
                             <div id="mega-wrapper" class="stickUpTop"><!-- bof mega-wrapper -->
 
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>"><?= Yii::t('app','Home');?></a>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['/']); ?>"><?= Yii::t('app','Home');?></a>
                                     </li>
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>"><?= Yii::t('app','About');?></a>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>"><?= Yii::t('app','About Us');?></a>
                                     </li>
                                     <li class="quicklinks-li "><a class="drop"
                                                                   href="<?= Url::to(['product/index']); ?>"><?= Yii::t('app','Product');?></a>
@@ -455,7 +455,7 @@ $bodyHomeIndex = 1;
                                 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>"><?= Yii::t('app','How Works');?></a></li>
 
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>"><?= Yii::t('app','Contact');?></a>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>"><?= Yii::t('app','Contact Us');?></a>
                                     </li>
 
 <!--                                    <li class="quicklinks-li"><a  class="drop" href="--><?//= Url::to(['category/index']);?><!--">Categories</a></li>-->
@@ -500,29 +500,29 @@ $bodyHomeIndex = 1;
             <div class="container">
                 <div class="row">
                     <div class="footer-menu col-xs-12 col-sm-3">
-                        <h2 class="title_btn1">Quick Links</h2>
+                        <h2 class="title_btn1"><?= Yii::t('app','Quick Links');?></h2>
 
                         <div class="ezpagesFooterCol col1" style="width: 100%">
                             <ul>
                                
-                                <li><a href="<?= Url::to(['site/index']); ?>">Home</a></li>
-                                <li><a href="<?= Url::to(['product/index']); ?>">Products</a></li>
-                                <li><a href="<?= Url::to(['purchase/index']); ?>">Purchase List</a></li>
+                                <li><a href="/"><?= Yii::t('app','Home');?></a></li>
+                                <li><a href="<?= Url::to(['product/index']); ?>"><?= Yii::t('app','Products');?></a></li>
+<!--                                <li><a href="--><?//= Url::to(['purchase/list']); ?><!--">--><?//= Yii::t('app','Purchase List');?><!--</a></li>-->
 
 
                             </ul>
                         </div>
                     </div>
                     <div class="account col-xs-12 col-sm-3 mb">
-                        <h2 class="title_btn2">Customers</h2>
+                        <h2 class="title_btn2"><?= Yii::t('app','Customers');?></h2>
                         <ul class="account_list">
-                         <li><a href="<?= Url::to(['site/contact']); ?>">Contact Us</a></li>
-                            <li><a href="<?= Url::to(['site/about']); ?>">About Us</a></li>
+                         <li><a href="<?= Url::to(['site/contact']); ?>"><?= Yii::t('app','Contact Us');?></a></li>
+                            <li><a href="<?= Url::to(['site/about']); ?>"><?= Yii::t('app','About Us');?></a></li>
                             
 
                     </div>
                     <div class="social col-xs-12 col-sm-3 mb">
-                        <h2 class="title_btn3">Follow Us</h2>
+                        <h2 class="title_btn3"><?= Yii::t('app','Follow Us');?></h2>
                         <ul class="social_list">
                             <li><a href="http://www.facebook.com">Facebook</a></li>
                             <li><a href="http://www.twitter.com">Twitter</a></li>
@@ -531,7 +531,7 @@ $bodyHomeIndex = 1;
                         </ul>
                     </div>
                     <div class="contact-block col-xs-12 col-sm-3 mb">
-                        <h2 class="title_btn4">Contact Us</h2>
+                        <h2 class="title_btn4"><?= Yii::t('app','Contact Us');?></h2>
                         <div class="contact_list">
                             <p>4700 W Prospect Rd #103,<br/>
                                 Fort Lauderdale, FL, 33309</p>
@@ -552,7 +552,7 @@ $bodyHomeIndex = 1;
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- ========== COPYRIGHT ========== -->
-                        <p>&copy; HalsecaVision <?= date('Y') ?></p>
+                        <p>&copy; HalsecaVision all rights reserve <?= date('Y') ?></p>
                         <!-- =============================== -->
                     </div>
                 </div>

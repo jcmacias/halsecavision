@@ -45,6 +45,22 @@ class PurchaseController extends Controller
         ]);
     }
 
+
+
+    /**
+
+     * @param integer $id
+     * @return Purchase the loaded model
+
+     */
+    public function actionList()
+    {
+
+        return $this->render('list', [
+
+        ]);
+    }
+
     /**
      * Displays a single Purchase model.
      * @param integer $id
@@ -129,4 +145,8 @@ class PurchaseController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+
+
 }
+

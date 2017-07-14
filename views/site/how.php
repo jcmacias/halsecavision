@@ -11,10 +11,12 @@ use yii\helpers\Url;
 
     <div class="container">
 
-        <h2 class="centerBoxHeading h2BoxHeadingab">How Works</h2>
+        <h2 class="centerBoxHeading h2BoxHeadingab"><?= Yii::t('app','How Works');?></h2>
 
-        <div class="row">
+        <div class="row" style="padding-bottom: 20px">
             <div class="col-sm-1"></div>
+
+            <?php  if (Yii::$app->language=='en') {?>
             <div class="border-grey col-sm-10">
 
 
@@ -73,8 +75,66 @@ use yii\helpers\Url;
 
             </div>
 
+            <?php } ?>
+
+            <?php  if (Yii::$app->language=='es') {?>
+                <div class="border-grey col-sm-10">
 
 
+
+
+                    <strong>¿Como Halseca Vision funciona?</strong></p>
+
+                    <p>
+                        Estamos dedicados al área de fabricación, importación, distribución y exportación de equipos de video,
+                        Cámaras (CCTV) y grabadoras de seguridad, tanto analógicas como digitales e híbridas.
+                    </p>
+
+                    <br>
+
+                    <strong>
+                        Usted tiene 3 formas que podra contactarnos  y ordenar una lista de producto.</strong>
+
+                    <br>
+
+                    <div class="col-sm-9"> <p> <strong>1. </strong> Usted puede llamar a nuestros profecionales al:
+                            <a href="tel:+19549516477">(954) 951-6477</a> en horas de oficina : 8am-5pm Lu-Vi, Usted podra hacer una orden de compra y obtener Los mejores productos que se ajustan a usted.
+
+                        </p></div>
+
+                    <br>
+
+
+
+
+                    <div class="col-sm-9">
+                        <p>
+                            <strong>2. </strong> Usted puede contactar con nuestros profecionales mediante el formulario
+                            <a href="<?= Url::to(['site/contact']); ?>">Contactenos</a> o directamente a travez de sus correos electronicos.
+
+                        </p>
+                        <br>
+
+                        <p>
+                            <strong>3. </strong> Usted puede buscar los  <a href="<?= Url::to(['product/index']); ?>">Productos</a>
+                            que desea a travez de nuestra pagina y añadirlos a la Lista a enviar y eviarsela a nuestro equipo de trabajo,
+                            nosotros lo contactaremos y enviaremos una quota para usted.
+
+
+                        </p>
+                        <br>
+
+                        <div class="border-grey">
+                            <p><img src="/images/Call-Center.jpg" alt=" how are halseca" style="width: 25%"> <strong>Estamos aqui para ayudarlo! </strong>
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <?php } ?>
 
 
 

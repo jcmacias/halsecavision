@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\ProductSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Products';
+$this->title = Yii::t('app','Products');
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container">
@@ -16,6 +16,7 @@ $this->title = 'Products';
 
         <h2 class="centerBoxHeading h2BoxHeadingab"><?= Html::encode($this->title) ?></h2>
         <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+
         <?php if(!Yii::$app->user->isGuest){?>
         <p>
             <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
