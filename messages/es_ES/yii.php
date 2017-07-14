@@ -17,14 +17,14 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    ' and ' => '',
+    ' and ' => 'y',
     '(not set)' => '',
     'An internal server error occurred.' => '',
     'Are you sure you want to delete this item?' => '',
     'Delete' => '',
     'Error' => '',
     'File upload failed.' => '',
-    'Home' => '',
+    'Home' => 'Inicio',
     'Invalid data received for parameter "{param}".' => '',
     'Login Required' => '',
     'Missing required arguments: {params}' => '',

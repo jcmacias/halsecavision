@@ -314,14 +314,16 @@ $bodyHomeIndex = 1;
         <div class="bottom">
             <div class="container">
                 <!-- ========== leguage ========== -->
-                <div class="row"><?= Html::beginForm() ?>
-                    <?= Html::dropDownList('language', Yii::$app->language, ['en-US' => 'English', 'es_ES' => 'Español']) ?>
-                    <?= Html::submitButton('Change') ?>
-                    <?= Html::endForm() ?>
-                </div>
+                <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
+                    'itemTemplate' => '<li><a href="{link}" title="{language}"><i id="{language}"></i> {name}</a></li>',
+                    'activeItemTemplate' => '<a href="{link}" title="{language}"><i id="{language}"></i> {name}</a>',
+                    'parentTemplate' => '<div class="language-picker dropdown-list {size}"><div>{activeItem}<ul>{items}</ul></div></div>',
+                    'languageAsset' => 'lajax\languagepicker\bundles\LanguageLargeIconsAsset',      // StyleSheets
+                    'languagePluginAsset' => 'lajax\languagepicker\bundles\LanguagePluginAsset',    // JavaScripts
+                ]); ?>
 
-                <div class="row clearfix">
-                    <div id="header_logo" class="col-xs-12 col-sm-3">
+
+                <div class="row clearfix">                    <div id="header_logo" class="col-xs-12 col-sm-3">
                         <!-- ========== LOGO ========== -->
                         <a  href="/"><img class="logo" src="/images/logo.png" alt="" style="padding-top: 10px;"/></a>
                         <!-- ========================== -->

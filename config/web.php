@@ -9,18 +9,30 @@ $config = [
     'bootstrap' => ['log'],
     'components' => [
 //********************Translation*****************************************
-        'i18n' => [
-            'translations' => [
-                '*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@app/messages',
-                    'sourceLanguage' => 'en',
-                    'fileMap' => [
-                        //'main' => 'main.php',
-                    ],
-                ],
-            ],
-        ],
+//
+//        'language' => 'en',
+//        'bootstrap' => ['languagepicker'],
+//        'components' => [
+//            'languagepicker' => [
+//                'class' => 'lajax\languagepicker\Component',        // List of available languages (icons and text)
+//                'languages' => ['en' => 'English', 'de' => 'Deutsch', 'fr' => 'Français']
+//            ]
+//        ],
+
+
+//
+//        'i18n' => [
+//            'translations' => [
+//                '*' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@app/messages',
+//                   'sourceLanguage' => 'en',
+//                    'fileMap' => [
+//                        'app' => 'app.php',
+//                    ],
+//                ],
+//            ],
+//        ],
 
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
