@@ -17,21 +17,15 @@ $(document).ready(function () {
     var cartStr= localStorage.simpleCart_items;
 
     cartJson =  JSON.parse(cartStr);
-
-   var items1=[];
-    var x=0;
+   var items=[];
     for (x in cartJson) {
-        var qty = cartJson[x].quantity;
         $.get('index.php?r=product/cart',{code : cartJson[x].name}, function(data)
         {
 
-
-            items1.push(data);
+            items.push(data);
 
             $('#p-list').append('<tr><td><div class="prod-img"><img style="width: 20%" src="uploads/'+data.image+'" alt=""></div></td><td><div class="prod-name">'+ data.name+
-                '</div></td><td><div class="prod-code">'+data.code+
-                '</div></td><td><div class="prod-qty">'+cartJson[x].quantity +'</div></td><td><div class="prod-desc">'+data.description+
-                '</div></td></tr>');
+                '</div></td><td><div class="prod-code">'+data.code+'</div></td><td><div class="prod-qty">'+cartJson[x].quantity+'</div></td><td><div class="prod-desc">'+data.description+'</div></td></tr>');
         });
 
 
@@ -41,8 +35,8 @@ $(document).ready(function () {
     // console.log(pur);
     $('#w0').on('submit', function (e) {
         e.preventDefault();
-        if(items1!=''){
-            var pur = JSON.stringify(items1);
+        if(items!=''){
+            var pur = JSON.stringify(items);
             $('#purchase-product_code').val(pur);
         }
         this.submit();

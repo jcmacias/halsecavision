@@ -34,7 +34,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
-        'jscript_jquery.empty-list.js',
+//        'jscript_jquery.empty-list.js',
         'js/jscript_jquery.add-to-cart.js',
         'js/jscript_jquery.carouFredSel-6.2.1-packed.js',
         'js/jscript_jquery.elevateZoom-3.0.8.min.js',

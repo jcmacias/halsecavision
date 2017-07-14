@@ -314,16 +314,14 @@ $bodyHomeIndex = 1;
         <div class="bottom">
             <div class="container">
                 <!-- ========== leguage ========== -->
-                <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
-                    'itemTemplate' => '<li><a href="{link}" title="{language}"><i id="{language}"></i> {name}</a></li>',
-                    'activeItemTemplate' => '<a href="{link}" title="{language}"><i id="{language}"></i> {name}</a>',
-                    'parentTemplate' => '<div class="language-picker dropdown-list {size}"><div>{activeItem}<ul>{items}</ul></div></div>',
-                    'languageAsset' => 'lajax\languagepicker\bundles\LanguageLargeIconsAsset',      // StyleSheets
-                    'languagePluginAsset' => 'lajax\languagepicker\bundles\LanguagePluginAsset',    // JavaScripts
-                ]); ?>
-
-
-                <div class="row clearfix">                    <div id="header_logo" class="col-xs-12 col-sm-3">
+              <div class="row pull-right">
+                  <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
+                      'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_BUTTON,
+                      'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_SMALL
+                  ]); ?>
+</div>
+                <div class="row clearfix">
+                    <div id="header_logo" class="col-xs-12 col-sm-3">
                         <!-- ========== LOGO ========== -->
                         <a  href="/"><img class="logo" src="/images/logo.png" alt="" style="padding-top: 10px;"/></a>
                         <!-- ========================== -->
@@ -392,12 +390,12 @@ $bodyHomeIndex = 1;
                             <div id="mega-wrapper" class="stickUpTop"><!-- bof mega-wrapper -->
 
                                 <ul class="mega-menu col-sm-12"><!-- bof mega-menu -->
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>">Home</a>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/index']); ?>"><?= Yii::t('app','Home');?></a>
                                     </li>
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>">About</a>
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/about']); ?>"><?= Yii::t('app','About');?></a>
                                     </li>
                                     <li class="quicklinks-li "><a class="drop"
-                                                                  href="<?= Url::to(['product/index']); ?>">Product</a>
+                                                                  href="<?= Url::to(['product/index']); ?>"><?= Yii::t('app','Product');?></a>
 
                                         <div class="dropdown col-2 ">
                                             <div class="firstcolumn">
@@ -407,7 +405,7 @@ $bodyHomeIndex = 1;
                                                         <li class="  first">
                                                             
                                                             <a href="<?= Url::to(['category/view', 'id' => 1]); ?>">
-                                                                <span>PTZ Camera</span>
+                                                                <span><?= \Yii::t('app','PTZ Camera');?></span>
                                                             </a>
                                                         </li>
 
@@ -428,14 +426,14 @@ $bodyHomeIndex = 1;
                                                         <li class="  ">
                                                            
                                                             <a href="<?= Url::to(['category/view', 'id' => 4]); ?>">
-                                                                <span>Cameras</span>
+                                                                <span><?= Yii::t('app','Cameras');?></span>
                                                             </a>
                                                         </li>
 
                                                         <li class=" last ">
                                                            
                                                             <a href="<?= Url::to(['category/view', 'id' => 5]); ?>">
-                                                                <span>Controls</span>
+                                                                <span><?= Yii::t('app','Controls');?></span>
                                                             </a>
                                                         </li>
                                                         <div class="clearfix"></div>
@@ -447,14 +445,17 @@ $bodyHomeIndex = 1;
                                         </div>
                                         <span class="plus"></span></li>
                                     </li>
-<!--                                    <li class="quicklinks-li"><a class="drop"-->
-<!--                                                                 -->
-<!--                                                                 href="--><?//= Url::to(['purchase/index']); ?><!--">Purchase List</a>-->
-<!--                                    </li>-->
-                                
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>">How Works</a></li>
+                                   <?php if(!Yii::$app->user->isGuest){?>
+                                       <li class="quicklinks-li"><a class="drop"
 
-                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>">Contact</a>
+                                                                    href="<?= Url::to(['purchase/index']); ?>">Purchase List</a>
+                                       </li>
+                                    <?php }?>
+
+                                
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>"><?= Yii::t('app','How Works');?></a></li>
+
+                                    <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>"><?= Yii::t('app','Contact');?></a>
                                     </li>
 
 <!--                                    <li class="quicklinks-li"><a  class="drop" href="--><?//= Url::to(['category/index']);?><!--">Categories</a></li>-->

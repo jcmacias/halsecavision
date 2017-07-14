@@ -172,6 +172,7 @@ use yii\widgets\Pjax;
                 </div>
             </div>
         </div>
+        <?php if(!Yii::$app->user->isGuest){?>
 
         <p>
             <?= Html::a('Update', ['update', 'id' => $model->id, 'category_id' => $model->category_id], ['class' => 'btn btn-primary']) ?>
@@ -183,7 +184,7 @@ use yii\widgets\Pjax;
                 ],
             ]) ?>
         </p>
-
+        <?php } ?>
     </div>
 </div>
 

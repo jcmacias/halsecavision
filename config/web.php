@@ -6,30 +6,25 @@ $db = require(__DIR__ . '/db.php');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+//    'bootstrap' => ['log'],
+    'language' => 'en',
+    'bootstrap' => ['languagepicker'],
     'components' => [
 //********************Translation*****************************************
-//
-//        'language' => 'en',
-//        'bootstrap' => ['languagepicker'],
-//        'components' => [
-//            'languagepicker' => [
-//                'class' => 'lajax\languagepicker\Component',        // List of available languages (icons and text)
-//                'languages' => ['en' => 'English', 'de' => 'Deutsch', 'fr' => 'Français']
-//            ]
-//        ],
+        'languagepicker' => [
+            'class' => 'lajax\languagepicker\Component',
+            'languages' => ['en', 'es'],
 
-
-//
+            ],
 //        'i18n' => [
 //            'translations' => [
 //                '*' => [
 //                    'class' => 'yii\i18n\PhpMessageSource',
 //                    'basePath' => '@app/messages',
-//                   'sourceLanguage' => 'en',
-//                    'fileMap' => [
-//                        'app' => 'app.php',
-//                    ],
+//                    //'sourceLanguage' => 'en',
+////                    'fileMap' => [
+////                        'app' => 'app.php',
+////                    ],
 //                ],
 //            ],
 //        ],
@@ -77,14 +72,13 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+//            'rules' => [
+//            ],
         ],
-        */
     ],
     'params' => $params,
 ];

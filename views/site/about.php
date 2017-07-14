@@ -13,10 +13,11 @@ use yii\helpers\Html;
         <h2 class="centerBoxHeading h2BoxHeadingab">About Us</h2>
 
         <div class="content form-control-block">
-
+            <?php  if (Yii::$app->language=='en') {?>
 
             <div class="border-grey">
                 <p>
+
 
                 <p><strong>Who we are?</strong></p>
 
@@ -53,7 +54,10 @@ use yii\helpers\Html;
                     products and services, ensuring the protection of the interests of our customers.
                 </p>
             </div>
-
+            <?php } ?>
+            <?php  if (Yii::$app->language=='es') {?>
+                <p> falta traduccion</p>
+            <?php }?>
         </div>
 
     </div>

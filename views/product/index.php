@@ -16,10 +16,11 @@ $this->title = 'Products';
 
         <h2 class="centerBoxHeading h2BoxHeadingab"><?= Html::encode($this->title) ?></h2>
         <?php echo $this->render('_search', ['model' => $searchModel]); ?>
-
+        <?php if(!Yii::$app->user->isGuest){?>
         <p>
             <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
+        <?php }?>
 
             <?= ColumnListView::widget([
             'dataProvider' => $dataProvider,
