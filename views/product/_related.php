@@ -6,7 +6,7 @@ use yii\helpers\Url;
         <div class="img"><a
                 href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
                     src="/uploads/<?= $model->image;  ?>" class="img-responsive" alt=""
-                    title=" Plumb Craft 5 Position Hand Held Shower Head - 8661 " width="114" height="114"></a></div>
+                    title="" width="114" height="114"></a></div>
         <div class="prod-info"><a class="product-name name "
                                   href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><?= $model->code;  ?></a></div>
     </div>
