@@ -9,7 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use yii\helpers\Url;
 use app\assets\AppAsset;
-
+$this->title ='Halseca Vision';
 AppAsset::register($this);
 $bodyHomeIndex = 1;
 ?>
@@ -24,9 +24,9 @@ $bodyHomeIndex = 1;
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <meta name="keywords"
-          content="Bathroom Home & Garden Kitchen Repair Parts Tools Water Heaters Supplies Sinks Water Taps Accessories ecommerce, open source, shop, online shopping, store ">
+          content="Camera security, Halseca, Vision, Security, XVR,NVR,DVR,Kits WIFI, IP/WIFI , shop, online shopping, store ">
     <meta name="description"
-          content="Zen Cart! :  - Bathroom Home & Garden Kitchen Repair Parts Tools Water Heaters Supplies Sinks Water Taps Accessories ecommerce, open source, shop, online shopping, store">
+          content="Zen Cart! :  - Camera security, Halseca, Vision, Security, XVR,NVR,DVR,Kits WIFI, IP/WIFI , shop, online shopping, store">
     <meta name="author" content="Halseca Vision"/>
     <script type="text/javascript">
         //<![CDATA[
@@ -65,134 +65,116 @@ $bodyHomeIndex = 1;
     <!--    <link rel="canonical" href="http://livedemo00.template-help.com/zencart_55417/">-->
 
     <script type="text/javascript" src="js/jscript_jquery-1.7.1.min.js"></script>
-    <!--    <script type="text/javascript" src="js/jscript_jquery.carouFredSel-6.2.1-packed.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.elevateZoom-3.0.8.min.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.equalheights.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.matchHeight.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.mousewheel.min.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.nivo.slider.pack.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.simplr.smoothscroll.min.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.touchSwipe.min.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_jquery.ui.totop.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_menu_top.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_script_bootstrap.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_stotal-storage.min.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_suggestionbox.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_top.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_xeasyTooltip.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_xjquery.easing.1.3.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_xjquery.jqtransform.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_xjquery.lightbox-0.5.js"></script>-->
-    <!--    <script type="text/javascript" src="js/jscript_xjscript_script.app.js"></script>-->
-    <script>
-        if (typeof zcJS == "undefined" || !zcJS) {
-            window.zcJS = {name: 'zcJS', version: '0.1.0.0'};
-        }
-        ;
 
-        zcJS.ajax = function (options) {
-            options.url = options.url.replace("&amp;", "&");
-            var deferred = $.Deferred(function (d) {
-                var securityToken = '325246477a4fcb5ff2b5c25305e177ce';
-                var defaults = {
-                        cache: false,
-                        type: 'POST',
-                        traditional: true,
-                        dataType: 'json',
-                        timeout: 5000,
-                        data: $.extend(true, {
-                            securityToken: securityToken
-                        }, options.data)
-                    },
-                    settings = $.extend(true, {}, defaults, options);
-
-                d.done(settings.success);
-                d.fail(settings.error);
-                d.done(settings.complete);
-                var jqXHRSettings = $.extend(true, {}, settings, {
-                    success: function (response, textStatus, jqXHR) {
-                        d.resolve(response, textStatus, jqXHR);
-                    },
-                    error: function (jqXHR, textStatus, errorThrown) {
-                        console.log(jqXHR);
-                        d.reject(jqXHR, textStatus, errorThrown);
-                    },
-                    complete: d.resolve
-                });
-                $.ajax(jqXHRSettings);
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                var response = jqXHR.getResponseHeader('status');
-                var responseHtml = jqXHR.responseText;
-                var contentType = jqXHR.getResponseHeader("content-type");
-                switch (response) {
-                    case '403 Forbidden':
-                        var jsonResponse = JSON.parse(jqXHR.responseText);
-                        var errorType = jsonResponse.errorType;
-                        switch (errorType) {
-                            case 'ADMIN_BLOCK_WARNING':
-                                break;
-                            case 'AUTH_ERROR':
-                                break;
-                            case 'SECURITY_TOKEN':
-                                break;
-
-                            default:
-                                alert('An Internal Error of type ' + errorType + ' was received while processing an ajax call. The action you requested could not be completed.');
-                        }
-                        break;
-                    default:
-                        if (jqXHR.status === 200 && contentType.toLowerCase().indexOf("text/html") >= 0) {
-                            document.open();
-                            document.write(responseHtml);
-                            document.close();
-                        } else {
-                            alert('An unknown response ' + response + ': :' + contentType + ': :' + errorThrown + ' was received while processing an ajax call. The action you requested could not be completed.');
-                        }
-                }
-            });
-
-            var promise = deferred.promise();
-            return promise;
-        };
-        zcJS.timer = function (options) {
-            var defaults = {
-                    interval: 10000,
-                    startEvent: null,
-                    intervalEvent: null,
-                    stopEvent: null
-
-                },
-                settings = $.extend(true, {}, defaults, options);
-
-            var enabled = new Boolean(false);
-            var timerId = 0;
-            var mySelf;
-            this.Start = function () {
-                this.enabled = new Boolean(true);
-
-                mySelf = this;
-                mySelf.settings = settings;
-                if (mySelf.enabled) {
-                    mySelf.timerId = setInterval(
-                        function () {
-                            if (mySelf.settings.intervalEvent) {
-                                mySelf.settings.intervalEvent(mySelf);
-                            }
-                        }, mySelf.settings.interval);
-                    if (mySelf.settings.startEvent) {
-                        mySelf.settings.startEvent(mySelf);
-                    }
-                }
-            };
-            this.Stop = function () {
-                mySelf.enabled = new Boolean(false);
-                clearInterval(mySelf.timerId);
-                if (mySelf.settings.stopEvent) {
-                    mySelf.settings.stopEvent(mySelf);
-                }
-            };
-        };
-    </script>
+<!--    <script>-->
+<!--        if (typeof zcJS == "undefined" || !zcJS) {-->
+<!--            window.zcJS = {name: 'zcJS', version: '0.1.0.0'};-->
+<!--        }-->
+<!--        ;-->
+<!---->
+<!--        zcJS.ajax = function (options) {-->
+<!--            options.url = options.url.replace("&amp;", "&");-->
+<!--            var deferred = $.Deferred(function (d) {-->
+<!--                var securityToken = '325246477a4fcb5ff2b5c25305e177ce';-->
+<!--                var defaults = {-->
+<!--                        cache: false,-->
+<!--                        type: 'POST',-->
+<!--                        traditional: true,-->
+<!--                        dataType: 'json',-->
+<!--                        timeout: 5000,-->
+<!--                        data: $.extend(true, {-->
+<!--                            securityToken: securityToken-->
+<!--                        }, options.data)-->
+<!--                    },-->
+<!--                    settings = $.extend(true, {}, defaults, options);-->
+<!---->
+<!--                d.done(settings.success);-->
+<!--                d.fail(settings.error);-->
+<!--                d.done(settings.complete);-->
+<!--                var jqXHRSettings = $.extend(true, {}, settings, {-->
+<!--                    success: function (response, textStatus, jqXHR) {-->
+<!--                        d.resolve(response, textStatus, jqXHR);-->
+<!--                    },-->
+<!--                    error: function (jqXHR, textStatus, errorThrown) {-->
+<!--                        console.log(jqXHR);-->
+<!--                        d.reject(jqXHR, textStatus, errorThrown);-->
+<!--                    },-->
+<!--                    complete: d.resolve-->
+<!--                });-->
+<!--                $.ajax(jqXHRSettings);-->
+<!--            }).fail(function (jqXHR, textStatus, errorThrown) {-->
+<!--                var response = jqXHR.getResponseHeader('status');-->
+<!--                var responseHtml = jqXHR.responseText;-->
+<!--                var contentType = jqXHR.getResponseHeader("content-type");-->
+<!--                switch (response) {-->
+<!--                    case '403 Forbidden':-->
+<!--                        var jsonResponse = JSON.parse(jqXHR.responseText);-->
+<!--                        var errorType = jsonResponse.errorType;-->
+<!--                        switch (errorType) {-->
+<!--                            case 'ADMIN_BLOCK_WARNING':-->
+<!--                                break;-->
+<!--                            case 'AUTH_ERROR':-->
+<!--                                break;-->
+<!--                            case 'SECURITY_TOKEN':-->
+<!--                                break;-->
+<!---->
+<!--                            default:-->
+<!--                                alert('An Internal Error of type ' + errorType + ' was received while processing an ajax call. The action you requested could not be completed.');-->
+<!--                        }-->
+<!--                        break;-->
+<!--                    default:-->
+<!--                        if (jqXHR.status === 200 && contentType.toLowerCase().indexOf("text/html") >= 0) {-->
+<!--                            document.open();-->
+<!--                            document.write(responseHtml);-->
+<!--                            document.close();-->
+<!--                        } else {-->
+<!--                            alert('An unknown response ' + response + ': :' + contentType + ': :' + errorThrown + ' was received while processing an ajax call. The action you requested could not be completed.');-->
+<!--                        }-->
+<!--                }-->
+<!--            });-->
+<!---->
+<!--            var promise = deferred.promise();-->
+<!--            return promise;-->
+<!--        };-->
+<!--        zcJS.timer = function (options) {-->
+<!--            var defaults = {-->
+<!--                    interval: 10000,-->
+<!--                    startEvent: null,-->
+<!--                    intervalEvent: null,-->
+<!--                    stopEvent: null-->
+<!---->
+<!--                },-->
+<!--                settings = $.extend(true, {}, defaults, options);-->
+<!---->
+<!--            var enabled = new Boolean(false);-->
+<!--            var timerId = 0;-->
+<!--            var mySelf;-->
+<!--            this.Start = function () {-->
+<!--                this.enabled = new Boolean(true);-->
+<!---->
+<!--                mySelf = this;-->
+<!--                mySelf.settings = settings;-->
+<!--                if (mySelf.enabled) {-->
+<!--                    mySelf.timerId = setInterval(-->
+<!--                        function () {-->
+<!--                            if (mySelf.settings.intervalEvent) {-->
+<!--                                mySelf.settings.intervalEvent(mySelf);-->
+<!--                            }-->
+<!--                        }, mySelf.settings.interval);-->
+<!--                    if (mySelf.settings.startEvent) {-->
+<!--                        mySelf.settings.startEvent(mySelf);-->
+<!--                    }-->
+<!--                }-->
+<!--            };-->
+<!--            this.Stop = function () {-->
+<!--                mySelf.enabled = new Boolean(false);-->
+<!--                clearInterval(mySelf.timerId);-->
+<!--                if (mySelf.settings.stopEvent) {-->
+<!--                    mySelf.settings.stopEvent(mySelf);-->
+<!--                }-->
+<!--            };-->
+<!--        };-->
+<!--    </script>-->
 
 
     <!--[if IE]>

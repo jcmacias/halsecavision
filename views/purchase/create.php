@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Purchase */
 
-$this->title = 'Create Purchase';
+$this->title = Yii::t('app','Create Purchase');
 ?>
 <div class="container">
 <div class="purchase-create">

@@ -47,25 +47,25 @@ use yii\widgets\ActiveForm;
             <tbody>
             <tr>
                 <td colspan="5" class="title-tr" align="center">
-                    Purchase List
+                    <?= Yii::t('app','Purchase List');?>
                 </td>
             </tr>
 
             <tr>
                 <td align="center">
-                    <div class="prod-img-label">Image</div>
+                    <div class="prod-img-label"><?= Yii::t('app','Image');?></div>
                 </td>
                 <td align="center">
-                    <div class="prod-name-label">Product Name</div>
+                    <div class="prod-name-label"><?= Yii::t('app','Product Name');?></div>
                 </td>
                 <td align="center">
-                    <div class="prod-code-label">Code</div>
+                    <div class="prod-code-label"><?= Yii::t('app','Code');?></div>
                 </td>
                 <td align="center">
                     <div class="prod-qty-label">Qty</div>
                 </td>
                 <td align="center">
-                    <div class="prod-desc-label">Description</div>
+                    <div class="prod-desc-label"><?= Yii::t('app','Description');?></div>
                 </td>
 
             </tr>
@@ -82,7 +82,7 @@ use yii\widgets\ActiveForm;
 
 
 <div class="form-group pull-right ">
-    <?= Html::submitButton($model->isNewRecord ? 'Send <i class="fa fa-send-o"></i> ' : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success ': 'btn btn-primary ']) ?>
+    <?= Html::submitButton($model->isNewRecord ? Yii::t('app','Send').' <i class="fa fa-send-o"></i>'  : 'Update', ['id'=>'p-send','class' => $model->isNewRecord ? 'btn btn-success ': 'btn btn-primary ']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>
