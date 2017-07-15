@@ -67,6 +67,7 @@ return [
     'Purchase List' => 'Lista de Productos',
     'Create Purchase' => 'Crear Presupuesto',
     'Image' => 'Imagen',
+    'My List' => 'Mi Lista',
 
 
 ];

@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 
-$this->title = 'Purchases List';
+$this->title = Yii::t('app','My List');
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -19,29 +19,29 @@ $this->title = 'Purchases List';
 
 <div>
     <div id="productQuantityDiscounts" class="table-responsive" style="margin-top:25px ">
-        <table id="1p-list" cellspacing="2" cellpadding="2" border="1">
+        <table id="p-list" cellspacing="2" cellpadding="2" border="1">
             <tbody>
             <tr>
                 <td colspan="5" class="title-tr" align="center">
-                    Purchase List
+                    <?= Yii::t('app','My List');?>
                 </td>
             </tr>
 
             <tr>
                 <td align="center">
-                    <div class="prod-img-label">Image</div>
+                    <div class="prod-img-label"><?= Yii::t('app','Image');?></div>
                 </td>
                 <td align="center">
-                    <div class="prod-name-label">Product Name</div>
+                    <div class="prod-name-label"><?= Yii::t('app','Product Name');?></div>
                 </td>
                 <td align="center">
-                    <div class="prod-code-label">Code</div>
+                    <div class="prod-code-label"><?= Yii::t('app','Code');?></div>
                 </td>
                 <td align="center">
                     <div class="prod-qty-label">Qty</div>
                 </td>
                 <td align="center">
-                    <div class="prod-desc-label">Description</div>
+                    <div class="prod-desc-label"><?= Yii::t('app','Description');?></div>
                 </td>
 
             </tr>

@@ -66,117 +66,6 @@ $bodyHomeIndex = 1;
 
     <script type="text/javascript" src="js/jscript_jquery-1.7.1.min.js"></script>
 
-<!--    <script>-->
-<!--        if (typeof zcJS == "undefined" || !zcJS) {-->
-<!--            window.zcJS = {name: 'zcJS', version: '0.1.0.0'};-->
-<!--        }-->
-<!--        ;-->
-<!---->
-<!--        zcJS.ajax = function (options) {-->
-<!--            options.url = options.url.replace("&amp;", "&");-->
-<!--            var deferred = $.Deferred(function (d) {-->
-<!--                var securityToken = '325246477a4fcb5ff2b5c25305e177ce';-->
-<!--                var defaults = {-->
-<!--                        cache: false,-->
-<!--                        type: 'POST',-->
-<!--                        traditional: true,-->
-<!--                        dataType: 'json',-->
-<!--                        timeout: 5000,-->
-<!--                        data: $.extend(true, {-->
-<!--                            securityToken: securityToken-->
-<!--                        }, options.data)-->
-<!--                    },-->
-<!--                    settings = $.extend(true, {}, defaults, options);-->
-<!---->
-<!--                d.done(settings.success);-->
-<!--                d.fail(settings.error);-->
-<!--                d.done(settings.complete);-->
-<!--                var jqXHRSettings = $.extend(true, {}, settings, {-->
-<!--                    success: function (response, textStatus, jqXHR) {-->
-<!--                        d.resolve(response, textStatus, jqXHR);-->
-<!--                    },-->
-<!--                    error: function (jqXHR, textStatus, errorThrown) {-->
-<!--                        console.log(jqXHR);-->
-<!--                        d.reject(jqXHR, textStatus, errorThrown);-->
-<!--                    },-->
-<!--                    complete: d.resolve-->
-<!--                });-->
-<!--                $.ajax(jqXHRSettings);-->
-<!--            }).fail(function (jqXHR, textStatus, errorThrown) {-->
-<!--                var response = jqXHR.getResponseHeader('status');-->
-<!--                var responseHtml = jqXHR.responseText;-->
-<!--                var contentType = jqXHR.getResponseHeader("content-type");-->
-<!--                switch (response) {-->
-<!--                    case '403 Forbidden':-->
-<!--                        var jsonResponse = JSON.parse(jqXHR.responseText);-->
-<!--                        var errorType = jsonResponse.errorType;-->
-<!--                        switch (errorType) {-->
-<!--                            case 'ADMIN_BLOCK_WARNING':-->
-<!--                                break;-->
-<!--                            case 'AUTH_ERROR':-->
-<!--                                break;-->
-<!--                            case 'SECURITY_TOKEN':-->
-<!--                                break;-->
-<!---->
-<!--                            default:-->
-<!--                                alert('An Internal Error of type ' + errorType + ' was received while processing an ajax call. The action you requested could not be completed.');-->
-<!--                        }-->
-<!--                        break;-->
-<!--                    default:-->
-<!--                        if (jqXHR.status === 200 && contentType.toLowerCase().indexOf("text/html") >= 0) {-->
-<!--                            document.open();-->
-<!--                            document.write(responseHtml);-->
-<!--                            document.close();-->
-<!--                        } else {-->
-<!--                            alert('An unknown response ' + response + ': :' + contentType + ': :' + errorThrown + ' was received while processing an ajax call. The action you requested could not be completed.');-->
-<!--                        }-->
-<!--                }-->
-<!--            });-->
-<!---->
-<!--            var promise = deferred.promise();-->
-<!--            return promise;-->
-<!--        };-->
-<!--        zcJS.timer = function (options) {-->
-<!--            var defaults = {-->
-<!--                    interval: 10000,-->
-<!--                    startEvent: null,-->
-<!--                    intervalEvent: null,-->
-<!--                    stopEvent: null-->
-<!---->
-<!--                },-->
-<!--                settings = $.extend(true, {}, defaults, options);-->
-<!---->
-<!--            var enabled = new Boolean(false);-->
-<!--            var timerId = 0;-->
-<!--            var mySelf;-->
-<!--            this.Start = function () {-->
-<!--                this.enabled = new Boolean(true);-->
-<!---->
-<!--                mySelf = this;-->
-<!--                mySelf.settings = settings;-->
-<!--                if (mySelf.enabled) {-->
-<!--                    mySelf.timerId = setInterval(-->
-<!--                        function () {-->
-<!--                            if (mySelf.settings.intervalEvent) {-->
-<!--                                mySelf.settings.intervalEvent(mySelf);-->
-<!--                            }-->
-<!--                        }, mySelf.settings.interval);-->
-<!--                    if (mySelf.settings.startEvent) {-->
-<!--                        mySelf.settings.startEvent(mySelf);-->
-<!--                    }-->
-<!--                }-->
-<!--            };-->
-<!--            this.Stop = function () {-->
-<!--                mySelf.enabled = new Boolean(false);-->
-<!--                clearInterval(mySelf.timerId);-->
-<!--                if (mySelf.settings.stopEvent) {-->
-<!--                    mySelf.settings.stopEvent(mySelf);-->
-<!--                }-->
-<!--            };-->
-<!--        };-->
-<!--    </script>-->
-
-
     <!--[if IE]>
     <script type="text/javascript"
             src="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.4-iefix.js"></script>
@@ -208,9 +97,6 @@ $bodyHomeIndex = 1;
 <div id="page">
     <!-- ========== IMAGE BORDER TOP ========== -->
 
-    <!-- BOF- BANNER TOP display -->
-
-    <!-- EOF- BANNER TOP display -->
 
     <!-- ====================================== -->
 
@@ -305,6 +191,8 @@ $bodyHomeIndex = 1;
                                                     class="cssButton normal_button button  button_checkout simpleCart_checkout"
                                                     onmouseover="this.className='cssButtonHover normal_button button  button_checkout button_checkoutHover'"
                                                     onmouseout="this.className='cssButton normal_button button  button_checkout'">&nbsp; <?= Yii::t('app','Send');?> <i class="fa fa-send"></i>&nbsp;</span></a>
+
+                                            <a class="btn btn-success" href="<?= Url::to(['purchase/list']); ?>"><span class="cssButton"><?= Yii::t('app','My List');?> <i class="fa fa-list-ul"></i></span></a>
                                         </div>
                                     </li>
                                 </ul>
@@ -395,20 +283,29 @@ $bodyHomeIndex = 1;
                                         </div>
                                         <span class="plus"></span></li>
                                     </li>
-                                   <?php if(!Yii::$app->user->isGuest){?>
-                                       <li class="quicklinks-li"><a class="drop"
 
-                                                                    href="<?= Url::to(['purchase/index']); ?>">Purchase List</a>
-                                       </li>
-                                    <?php }?>
 
                                 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/how']); ?>"><?= Yii::t('app','How Works');?></a></li>
 
                                     <li class="quicklinks-li"><a class="drop" href="<?= Url::to(['site/contact']); ?>"><?= Yii::t('app','Contact Us');?></a>
                                     </li>
+                                    <?php if(!Yii::$app->user->isGuest){?>
+                                        <li class="quicklinks-li"><a  class="drop" href="<?= Url::to(['category/index']);?>">Categories</a></li>
+                                    <?php }?>
+                                    <?php if(!Yii::$app->user->isGuest){?>
+                                        <li class="quicklinks-li"><a class="drop"
 
-<!--                                    <li class="quicklinks-li"><a  class="drop" href="--><?//= Url::to(['category/index']);?><!--">Categories</a></li>-->
+                                                                     href="<?= Url::to(['purchase/index']); ?>">Purchase List</a>
+                                        </li>
+                                    <?php }?>
+                                    <?php if(!Yii::$app->user->isGuest){?>
+                                        <li><?= Html::a('<i class="fa fa-sign-out" aria-hidden="true"></i> (' . Yii::$app->user->identity->username . ')', ['site/logout'], [
+                                            'data'=>[
+                                                'method' => 'post',
+                                            ]
+                                        ]) ?></li>
+                                    <?php }?>
 
                                 </ul><!-- eof mega-menu -->
 
@@ -457,7 +354,7 @@ $bodyHomeIndex = 1;
                                
                                 <li><a href="/"><?= Yii::t('app','Home');?></a></li>
                                 <li><a href="<?= Url::to(['product/index']); ?>"><?= Yii::t('app','Products');?></a></li>
-<!--                                <li><a href="--><?//= Url::to(['purchase/list']); ?><!--">--><?//= Yii::t('app','Purchase List');?><!--</a></li>-->
+                                <li><a href="<?= Url::to(['purchase/list']); ?>"><?= Yii::t('app','My List');?></a></li>
 
 
                             </ul>
