@@ -42,7 +42,7 @@ use yii\widgets\ActiveForm;
 
 
     <div>
-        <div id="productQuantityDiscounts" class="table-responsive" style="margin-top:25px ">
+        <div id="productQuantityDiscounts" class="table-responsive " style="margin-top:25px ">
         <table id="p-list" cellspacing="2" cellpadding="2" border="1">
             <tbody>
             <tr>

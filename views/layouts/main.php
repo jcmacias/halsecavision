@@ -189,39 +189,7 @@ $bodyHomeIndex = 1;
         alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/></a>
     </div><![endif]-->
 
-    <script>
 
-        $(document).ready(function () {
-            var origsrc = $("#productMainImage span img").attr("src");
-            $("#productAdditionalImages .additionalImages a img").hover(
-                function () {
-                    $("#productMainImage span img").attr('src', this.src);
-                });
-
-            $('.main-image #productMainImage .image a img').elevateZoom({
-                easing: true,
-                zoomWindowFadeIn: 500,
-                zoomWindowFadeOut: 500,
-                lensFadeIn: 500,
-                lensFadeOut: 500
-            });
-
-            var origsrc = $("#productMainImage span img").attr("src");
-            var orighref = $("#productMainImage span a").attr("href");
-            $("#productAdditionalImages .additionalImages a img").hover(
-                function () {
-                    $("#productMainImage span.image a").attr('href', this.src);
-                    $('.main-image #productMainImage .image a img').elevateZoom({
-                        easing: true,
-                        zoomWindowFadeIn: 500,
-                        zoomWindowFadeOut: 500,
-                        lensFadeIn: 500,
-                        lensFadeOut: 500
-                    });
-                });
-        });
-
-    </script>
 
 
     <!--[if lte IE 9]>
@@ -347,14 +315,14 @@ $bodyHomeIndex = 1;
 
                         <div id="search_block" class="clearfix">
                             <!-- ========== SEARCH ========== -->
-                            <form name="quick_find_header" action="#" method="get"
+                            <form name="quick_find_header" action="<?= Url::to('/site/results')?>" method="get"
                                   class="form-inline form-search pull-right">
-                                <input type="hidden" name="main_page" value="advanced_search_result"/><input
-                                    type="hidden" name="search_in_description" value="1"/><input type="hidden"
-                                                                                                 name="zenid"
-                                                                                                 value="40mv0tfoegcguu0cep33hhokj3"/>
+<!--                                <input type="hidden" name="main_page" value="advanced_search_result"/><input-->
+<!--                                    type="hidden" name="search_in_description" value="1"/><input type="hidden"-->
+<!--                                                                                                 name="zenid"-->
+<!--                                                                                                 value="40mv0tfoegcguu0cep33hhokj3"/>-->
                                 <label class="sr-only" for="searchInput">Search</label>
-                                <input class="form-control" id="searchInput" type="text" name="keyword"/>
+                                <input class="form-control" id="searchInput" type="text" name="ProductSearch[code]"/>
                                 <button type="submit" class="button-search"><i class="fa fa-search"></i><b>Search</b>
                                 </button>
                             </form>
@@ -558,6 +526,39 @@ $bodyHomeIndex = 1;
         s.parentNode.insertBefore(ga, s);
     })();</script>
 <?php $this->endBody() ?>
+<script>
+
+    $(document).ready(function () {
+        var origsrc = $("#productMainImage span img").attr("src");
+        $("#productAdditionalImages .additionalImages a img").hover(
+            function () {
+                $("#productMainImage span img").attr('src', this.src);
+            });
+
+        $('.main-image #productMainImage .image a img').elevateZoom({
+            easing: true,
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500
+        });
+
+        var origsrc = $("#productMainImage span img").attr("src");
+        var orighref = $("#productMainImage span a").attr("href");
+        $("#productAdditionalImages .additionalImages a img").hover(
+            function () {
+                $("#productMainImage span.image a").attr('href', this.src);
+                $('.main-image #productMainImage .image a img').elevateZoom({
+                    easing: true,
+                    zoomWindowFadeIn: 500,
+                    zoomWindowFadeOut: 500,
+                    lensFadeIn: 500,
+                    lensFadeOut: 500
+                });
+            });
+    });
+
+</script>
 </body><!-- Google Tag Manager -->
 <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0"
