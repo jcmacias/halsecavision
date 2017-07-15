@@ -36,6 +36,7 @@ class ProductController extends Controller
      */
     public function actionIndex()
     {
+
         $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->pagination = ['defaultPageSize' => 8];

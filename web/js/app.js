@@ -19,18 +19,24 @@ $(document).ready(function () {
     cartJson =  JSON.parse(cartStr);
    var items=[];
     for (x in cartJson) {
-        $.get('index.php?r=product/cart',{code : cartJson[x].name}, function(data)
+        $.get('/product/cart',{code : cartJson[x].name}, function(data)
         {
 
-            items.push(data);
-
-            $('#p-list').append('<tr><td><div class="prod-img"><img style="width: 20%" src="uploads/'+data.image+'" alt=""></div></td><td><div class="prod-name">'+ data.name+
-                '</div></td><td><div class="prod-code">'+data.code+'</div></td><td><div class="prod-qty">'+cartJson[x].quantity+'</div></td><td><div class="prod-desc">'+data.description+'</div></td></tr>');
+            items.push({});
+console.log(cartJson);
+            $('#p-list').append('<tr><td><div class="prod-img"><img style="width: 20%" src="/uploads/'+data.image+'" alt=""></div></td><td><div class="prod-name">'+ data.name+
+                '</div></td><td><div class="prod-code">'+data.code+'</div></td><td><div class="prod-qty-'+data.id+'" ></div></td><td><div class="prod-desc">'+data.description+'</div></td></tr>');
+            for(e in cartJson) {
+                if(cartJson[e].name == data.code){
+                    console.log(cartJson[e].name+"=="+data.code);
+                    console.log('prod-qty-'+data.id);
+                    $('.prod-qty-'+data.id).text(cartJson[e].quantity);
+                    break;
+                }
+            }
         });
 
-
     }
-
 
     // console.log(pur);
     $('#w0').on('submit', function (e) {

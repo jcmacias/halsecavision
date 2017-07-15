@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Product;
+use app\models\ProductSearch;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -127,6 +128,26 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionResults()
+    {
+        $searchModel = new ProductSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination = ['defaultPageSize' => 8];
+
+        return $this->render('results',[
+            'dataProvider'=>$dataProvider
+        ]);
+
+//        if($param != ''){
+//            $dataProvider = $model->search($param);
+//            return $this->render('result',[
+//                'dataProvider'=>$dataProvider
+//            ]);
+//        }
+
+//        return $this->goHome();
     }
 
     public function actionHow()
