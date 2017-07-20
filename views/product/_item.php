@@ -14,7 +14,7 @@ use yii\helpers\Url;
 <div class="product-col simpleCart_shelfItem">
     <div class="img">
         <a  href="<?= Url::to(['product/view', 'id' => $model->id,'category_id' => $model->category_id]);?>"><img
-                src="/uploads/<?= $model->image ?>" class="img-responsive img-item" alt="Halseca Products"
+                src="/uploads/<?= $model->image ?>" class="img-item img-responsive " alt="Halseca Products"
                 title="Halseca Products" width="200" height="200"></a></div>
     <div class="prod-info"><h5 itemprop="name">
             <?= Html::a(Html::encode($model->code), ['view', 'id' => $model->id, 'category_id' => $model->category_id],['class' => 'product-name name item_name']);?>

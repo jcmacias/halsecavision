@@ -19,7 +19,7 @@ $this->title = 'Categories';
     <p>
         <?= Html::a('Create Category', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
+<?php  ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -33,5 +33,5 @@ $this->title = 'Categories';
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-<?php Pjax::end(); ?></div>
+<?php  ?></div>
 </div>

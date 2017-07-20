@@ -96,14 +96,14 @@ use yii\widgets\Pjax;
 
                                     <?php if (Yii::$app->language == 'en') { ?>
                                         <div id="button_product">
-                                            <div class="add_to_cart_row  add-to-list">
+                                            <div class="add_to_cart_row ">
                                                 <strong class="fleft text2"><input
                                                         class="form-control item_Quantity" name="cart_quantity"
                                                         value="1" maxlength="6"
                                                         size="8" type="text"><input name="products_id" value="1"
                                                                                     type="hidden"></strong><span
                                                     class="buttonRow"><input
-                                                        class=" add-to-list btn btn-success add-to-cart item_add"
+                                                        class="  btn btn-success add-to-cart add-to-list item_add"
                                                         value="Add to List" type="button"></span></div>
                                         </div>
                                     <?php } ?>
@@ -115,7 +115,7 @@ use yii\widgets\Pjax;
                                                         value="1" maxlength="6"
                                                         size="8" type="text"><input name="products_id" value="1"
                                                                                     type="hidden"></strong><span
-                                                    class="buttonRow"><input
+                                                    class="buttonRow "><input
                                                         class=" btn btn-success add-to-cart item_add add-to-list"
                                                         value="Añadir a la Lista" type="button"></span></div>
                                         </div>
@@ -145,7 +145,7 @@ use yii\widgets\Pjax;
                                             'nextPageLabel' => 'next',
                                             'maxButtonCount' => 3,
                                         ],
-                                        'layout' => "{items}\n{pager}",
+                                        'layout' => "\n{items}\n{pager}",
 
                                     ])
 

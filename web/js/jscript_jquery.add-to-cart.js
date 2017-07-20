@@ -10,6 +10,7 @@ $(document).ready(function () {
         var cart = $('.shopping_cart');
 
         var imgtodrag = $(this).parent( "div" ).parent( "div" ).parent( "div" ).parent( "div" ).parent('.product-col').find(".img-item").eq(0);
+
         console.log(imgtodrag);
         if (imgtodrag) {
             var imgclone = imgtodrag.clone()

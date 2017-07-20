@@ -31,7 +31,7 @@ $this->title = $model->name;
 
 
 
-    <?php Pjax::begin(); ?>    <?= ColumnListView::widget([
+    <?php ?>    <?= ColumnListView::widget([
         'dataProvider' => $dataProvider,
         'columns' => 3, // default : 1
         'itemView' => '_item',
@@ -42,7 +42,7 @@ $this->title = $model->name;
             'nextPageLabel' => 'next',
             'maxButtonCount' => 3,
         ],
-        'layout' => "{items}\n{pager}",
+        'layout' => "\n{items}\n{pager}",
 
 //            'itemView' => function ($model, $key, $index, $widget) {
 //                        return Html::a(Html::encode($model->name), ['view', 'id' => $model->id, 'category_id' => $model->category_id]);
@@ -51,7 +51,7 @@ $this->title = $model->name;
     ])
 
     ?>
-    <?php Pjax::end(); ?>
+    <?php  ?>
 
 </div>
 </div>
