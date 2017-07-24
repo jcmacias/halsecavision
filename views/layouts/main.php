@@ -271,7 +271,7 @@ $bodyHomeIndex = 1;
                                                         <li class=" last ">
                                                            
                                                             <a href="<?= Url::to(['category/view', 'id' => 5]); ?>">
-                                                                <span><?= Yii::t('app','Controls');?></span>
+                                                                <span><?= Yii::t('app','Accessories');?></span>
                                                             </a>
                                                         </li>
                                                         <div class="clearfix"></div>

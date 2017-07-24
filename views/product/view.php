@@ -134,7 +134,7 @@ use yii\widgets\Pjax;
                                 <h2 class="centerBoxHeading clearfix"><?= Yii::t('app', 'Related Products'); ?></h2>
                                 <div class="row">
 
-                                    <?php Pjax::begin(); ?>    <?= ColumnListView::widget([
+                                    <?php  ?>    <?= ColumnListView::widget([
                                         'dataProvider' => $related,
                                         'columns' => 6, // default : 1
                                         'itemView' => '_related',
@@ -150,7 +150,7 @@ use yii\widgets\Pjax;
                                     ])
 
                                     ?>
-                                    <?php Pjax::end(); ?>
+                                    <?php ?>
                                 </div>
                             </div>
 

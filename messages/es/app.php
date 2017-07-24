@@ -68,6 +68,8 @@ return [
     'Create Purchase' => 'Crear Presupuesto',
     'Image' => 'Imagen',
     'My List' => 'Mi Lista',
+    'Accessories' => 'Accesorios',
+
 
 
 ];
